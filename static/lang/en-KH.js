@@ -17,15 +17,21 @@ module.exports = {
     bannerOneEn: 'Your beauty begins here.',
     addrFont: 'អាសយដ្ឋាន',
     addrDetailsFont: 'ភូមិ១២ សង្កាត់ទន្លេបាសាក់ ខ័ណ្ឌចំការមន រាជធានីភ្នំពេញ។ ក្បែរផ្សារទំនើប អ៊ីអនមលភ្នំពេញ',
+    addrDetailsLonDonFont: "W9 1PP ផ្ទះលេខ56 ផ្លូវ Maida Vale ទីក្រុងឡុនដុន",
+    addrDetailsHongKongFont: "7Aលេខ68 ផ្លូវ Kimberley, Tsim Sha Tsui, ហុងកុង",
+    addrDetailsPHFont: "បុរីប៉េងហួតបឹងស្នោរ",
+
     telFont: 'លេខទំនាក់ទំនង',
     emailFont: 'អ៊ីមែល',
     copyrightFont: 'ម៉ូណែត គ្លីនិកប៊ីយូធីខេមបូឌារក្សារសិទ្ធគ្រប់យ៉ាង',
-    brandStoryFont: 'សាវតាផលិតផល',
+    brandStoryFont: 'About Us',
     brandStoryOneFont: 'ម៉ូណែត គ្លីនិកប៊ីយូធីខេមបូឌាដោយប្រកាន់ខ្ជាប់នូវឧត្តមគតិយ៉ាងម៉ឹងម៉ាត់នៃការផ្លាស់ប្តូរជំនាញបច្ចេកទេសនិងសេវាកម្មប្រកបដោយវិជ្ជាជីវៈ។ ការបង្កើតមន្ទីរពេទ្យនេះផ្តល់ជូននូវសេវាកម្មសោភ័ណភាពវេជ្ជសាស្រ្តប្រកបដោយភាពទាន់សម័យនិង សម្រាប់អ្នកដែលស្រឡាញ់សម្រស់។ ម៉ូណែត ប៊ីយូធីតែងតែ “ ជួយមិត្តទាំងអស់ដែលស្រលាញ់ភាពស្រស់ស្អាត ដើម្បីទទួលបាននូវសេចក្តីប្រាថ្នា និងភាពស្រស់ស្អាតរបស់ពួកគេដោយទំនុកចិត្តនិងសុវត្ថិភាព” ដែលជាបេសកកម្មនៃការអភិវឌ្ឍន៍របស់គ្លីនិក!',
     brandStoryTwoFont: 'ម៉ូណែត គ្លីនិកប៊ីយូធីខេមបូឌាជាមន្ទីរពេទ្យវះកាត់ខ្សែសង្វាក់ដែលមានគុណភាពតែងតែធ្វើតាមផ្នត់គំនិតនៃសេវាកម្ម "ធម្មជាតិ សុវត្ថិភាពនិងស្រស់ស្អាត" ។ បង្កើតជំនាញវិជ្ជាជីវៈមន្ទីរសុខាភិបាលនិងមន្ទីរជំនួយជាង ១០ កន្លែងដូចជាមជ្ឈមណ្ឌលវះកាត់សម្ផស្ស ស្បែក មជ្ឈមណ្ឌលវះកាត់ខ្នាតតូច មជ្ឈមណ្ឌលប្រឆាំងភាពចាស់ និងការថែទាំសុខភាព។ ល។',
     brandStoryDetailsFont: 'ព័ត៌មានលម្អិត',
     aboutUsFont: 'អំពីពួកយើង',
-    aboutUsConFont: 'ម៉ូណែត គ្លីនិកប៊ីយូធីនិងមានវេជ្ជបណ្ឌិតជំនាញពិគ្រោះយោបល់និងអញ្ជើញក្រុមពិគ្រោះយោបល់របស់វេជ្ជបណ្ឌិតចិនជប៉ុននិងកូរ៉េអោយធ្វើការពិគ្រោះ។ ការផ្តោតសំខាន់គឺការធ្វើអោយស្បែកស, ប្រឆាំងភាពចាស់ និងគ្រប់គ្រងការលូតលាស់សក់។ ផ្តោតលើនិន្នាការ៣យ៉ាងគឺ“ ការថែរក្សាស្បែកវេជ្ជសាស្ត្រ ការគ្រប់គ្រងសម្រស់និងលក្ខខ័ណ្ឌធ្វើឱ្យប្រសើរឡើង "ផ្តល់ឱ្យស្ត្រីនៃការគ្រប់គ្រងស្បែកដែលមានជំនាញច្បាស់ ការថែរក្សាស្បែកដោយការចាក់ថ្នាំ និងដំណោះស្រាយផ្នែកវេជ្ជសាស្រ្តដូចជាការធ្វើឱ្យមានភាពស្រស់ថ្លា បច្ចេកវិទ្យាលូតលាស់សក់និងការគ្រប់គ្រងស្បែកក្បាលនិងដំណោះស្រាយវេជ្ជសាស្រ្តដូចជាបណ្តាញេវេជ្ជសាស្រ្តនៅក្រៅប្រទេស។',
+    aboutUsConFont: "Monet Beauty Clinic is largest and top class with most luxury skincare experiece in London, using latest FDA Approved technology for face, body &Skin.  Originated from dermatology expertise and research, headquartered in Hongkong since 2010.  Monet Beauty is focused on top-quality services and our experienced & esteemed doctors team is made internationally, including China, Japan, Korea and the UK.   We are professional to provide Asian-style aesthetic treatments.",
+    aboutUsConSecondFont: "Monet Beauty combines the most advanced non-surgical treatments from the US , Europe, Korea and Japan.  We aim to provide bespoke treatment plans to you as our valued customer and tailor to your needs.   We are excellent in skin management, including whitening, anti-ageing and Skin Rejuvenation.   Besides we are also brilliant in fat reduction, facial injectables, thread lifts and Hair transplant etc treatments. ",
+    aboutUsConThirdFont: "As of today, Monet Beauty has served over 15,000 clients from all around the world, establishing  trust and an excellent reputation among them.",
     OurServicesFont: 'កញ្ចប់សេវាកម្ម',
     raiseHairFeatureFont: 'លក្ខណៈពិសេស ：គ្រឿងសំអាងគឺជាសារធាតុឬផលិតផលដែលត្រូវបានប្រើដើម្បីលើកកម្ពស់ ឬផ្លាស់ប្តូររូបរាងនៃមុខឬក្លិនក្រអូបនិងសុខភាពនៃរាងកាយ។ គ្រឿងសំអាងជាច្រើនត្រូវបានរចនាឡើងយ៉ាងពិសេសសម្រាប់លាបលើមុខសក់និងដងខ្លួន…',
     moreFont: 'ស្វែងយល់បន្ថែម',
@@ -38,6 +44,11 @@ module.exports = {
     shareFont: 'ចែករំលែកការផ្លាស់ប្តូរ',
     newsInfoFont: 'ព័ត៌មានវេជ្ជសាស្រ្ត',
     timeFont: 'ពេលវេលាបច្ចុប្បន្នភាព：',
+
+    jinBianFont: 'Phnom Penh Branch',
+    lonDonFont: 'London Branch',
+    jinBianPHFont: 'Phnom Penh PH Branch',
+    hongKongFont: 'Hong Kong Branch',
 
     consultFont: 'ការប្រឹក្សា',
     nameFont: 'គោត្តនាម',
@@ -52,17 +63,17 @@ module.exports = {
     specialProjectFont: 'គម្រោងពិសេស',
     fightDeclineAscensionFont: 'ការប្រឆាំងភាពចាស់',
     fightDeclineAscensionFont01: 'ការប្រឆាំងភាពចាស់',
-    fightOneFont: 'Fotona 4D Pro ការបំបាត់ស្នាមជ្រីវជ្រួញដោយឡាស៊ែរ',
+    fightOneFont: 'Fotona 4D Pro',
     fightTwoFont: 'Ultherapy ព្យាបាលផ្នែកមុខដោយកាំបិត Ultrasound ជ្រាបចូលយ៉ាងជ្រៅរបស់SMAS',
     fightTenFont: 'ENDYMED 3Deep radiofrequency tightening & lift',
-    fightThreeFont: 'ឆ្លាក់ខ្សែបំលាស់ទីជាតិខ្លាញ់ដោយElla របស់អាល្លឺម៉ង់',
+    fightThreeFont: 'Variety American Threadlift',
     fightFourFont: 'ការថែរក្សាកោសិកាស្បែករបស់ជប៊ុនដោយពន្លឺទឹកឥតម្ជុល ',
     fightFiveFont: 'ការចាក់ពន្លឺទឹកឥតម្ជុលដែលមិនមានរបួសដោយSEYO	របស់អាល្លឺមង់',
     fightSixFont: 'ប្រឆាំងភាពចាស់ជ្រីវជ្រួញលើផ្ទៃមុខ ដោយFiorman',
     fightSevenFont: 'ការថែទាំព្យាបាលផ្នែកមុខដោយLa Mer',
     fightEightFont: 'ការថែទាំប្រឆាំងភាពចាស់ Genaissance ដោយLa Mer',
     fightNineFont: 'Thermage Flx បំបាត់ស្នាមជ្រីវជ្រួញជំនាន់ទី ៥',
-    fightElevenFont: 'BTL Ultra360 collagen guns', // ff
+    fightElevenFont: 'BTL Ultra360', // ff
 
     whiteningBeautyCreamFont: 'ធ្វើឱ្យស្បែកសនិងបំបាត់សន្លាក',
     whiteningBeautyCreamFont01: 'ធ្វើឱ្យស្បែកសនិងបំបាត់សន្លាក',
@@ -79,14 +90,12 @@ module.exports = {
     cleanOneFont: 'ការសម្អាតស្បែក និងផ្ដល់សំណើមពីស្រទាប់ស្បែកខាងក្នុងដោយ Hydrafacial',
     cleanTwoFont: 'ការបន្សុទ្ធមុខនិងការថែរក្សាសំណើមពីផលិតផល La Mer',
     cleanThreeFont: 'ការថែរក្សាស្បែកមុខមានសំណើមពីផលិតផល Valmont',
-    cleanFourFont: 'ការចាក់បញ្ចូលថាមពលដោយពន្លឺទឹកឥតម្ជុលរបស់ filmed',
     cleanFiveFont: 'ការថែរក្សាស្បែកមុខមានសំណើមពីផលិតផល Fillmed',
 
     shrinkPoresFont: 'បង្រួមរន្ធញើស',
     shrinkPoresFont01: 'បង្រួមរន្ធញើស',
     shrinkOneFont: 'Picoway បង្រួមរន្ធញើស',
     shrinkTwoFont: 'Gold microneedle ដោយម៉ាស៊ីនENDYMED របស់អ៊ីស្រាអែល',
-    shrinkFourFont: 'ធ្វើអោយស្បែកទន់រលោងដោយ Alma',
 
     raiseHairFont: 'បណ្ដុះនិងចឹញ្ចឹមសក់',
     raiseHairFont01: 'បណ្ដុះនិងចឹញ្ចឹមសក់',
@@ -105,7 +114,6 @@ module.exports = {
     privateRaiseFont01: 'ថែទាំតំបន់ឯកជន',
     privateOneFont: 'ការព្យាបាលតំបន់ឯកជនដោយម៉ាស៊ីនFotona Smooth',
     privateTwoFont: 'ការធ្វើPicowayឱ្យតំបន់ឯកជនព័ណស៊ីជំពូរ',
-    privateThreeFont: 'ការឆ្លាក់ខ្សែស្រឡាយរឹតបន្តឹងតំបន់ឯកជន',
     privateFourFont: 'ឧបករណ៌ថែទាំសុខភាពស្បូន​ ប្រទេសជប៉ុន',
 
     injectionFont: 'ចាក់ថ្នាំសំរករាង',
@@ -127,13 +135,19 @@ module.exports = {
     otherSevenFont: 'សេរ៉ូមបង្កើនភាពស៊ាំនិងបន្សាបជាតិពុលក្នុងថ្លើមរបស់ ជប៊ុន',
     otherEightFont: 'ថែរក្សាភ្នែកប្រឆាំងភាពចាស់ពីផលិតផល Lamer',
 
-    membersOnlyFont: 'Member Exclusive',
-    membersOnlyFont01: 'Member Exclusive',
+    membersOnlyFont: '៤. ផ្តាច់មុខចំពោះសមាជិក',
     membersFont: 'Open to members only',
     membersOneFont: 'Japanese Miss eye dor eyelash grafting',
     membersTwoFont: 'Japanese mao gel Manicure',
     membersThreeFont: 'VALMONT body oil massage',
     membersFourFont: 'MTG Scalp Health Management',
+
+    skinProblemFont: 'Skin Problem Repair',
+    skinProblemOneFont: 'LDM-MED',
+    skinProblemTwoFont: 'LUTRONIC Healite IIC',
+    skinProblemThreeFont: 'Lumenis M22 AOPT ',
+
+    faceAndBodyFont: "Face And Body Reshaping",
 
     brandListFont: 'តារាងផលិតផល',
     brandFont01: 'LA MER',
@@ -154,10 +168,12 @@ module.exports = {
     brandFont16: 'RESTYLANE',
     brandFont17: 'thermage',
     brandFont18: 'ENDYMED',
+    brandFont19: 'LDM-MED',
+    brandFont20: 'Lutronic',
+    brandFont21: 'BTL',
+    brandFont22: 'Lumenis',
 
     checkFont: 'ស្វែងរក',
     placeFont: 'សូមបំពេញបន្ថែមដើម្បីស្វែងរក',
-
-
   },
 }

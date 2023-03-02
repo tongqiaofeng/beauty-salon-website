@@ -83,56 +83,170 @@
             />
           </div>
         </el-carousel-item>
-
-        <!-- <el-carousel-item>
-          <div>
-            <img src="../assets/imgs/home/banner01.png" class="banner-01" />
-          </div>
-          <div v-if="langType == 'en-US'" class="banner01-font-en">
-            <p
-              class="font-top-english"
-              style="color: #755793;"
-              v-html="$t('localization.bannerOne')"
-            ></p>
-          </div>
-          <div v-if="langType == 'en-KH'" class="banner01-font-kh">
-            <p
-              style="color: #755793;"
-              class="font-top-kh"
-              v-html="$t('localization.bannerOne')"
-            ></p>
-            <p style="color: #755793;" class="font-bottom-kh">
-              {{ $t("localization.bannerOneEn") }}
-            </p>
-          </div>
-          <div
-            v-if="langType !== 'en-US' && langType !== 'en-KH'"
-            class="banner01-font"
-          >
-            <p
-              style="color: #755793;"
-              class="font-top"
-              v-html="$t('localization.bannerOne')"
-            ></p>
-            <p style="color: #755793;" class="font-bottom">
-              {{ $t("localization.bannerOneEn") }}
-            </p>
-          </div>
-        </el-carousel-item> -->
       </el-carousel>
+    </div>
+    <div class="home-page-fourth">
+      <div class="fourth-phone-title" style="margin-bottom: 15px">
+        <img
+          :src="
+            langType == 'zh-CN'
+              ? store03
+              : langType == 'zh-TW'
+              ? store02
+              : langType == 'en-US'
+              ? store01
+              : store01
+          "
+        />
+      </div>
+
+      <div class="pc-main">
+        <div class="fourth-main-pc">
+          <div class="main-every">
+            <img
+              :src="
+                langType == 'zh-CN'
+                  ? pcStoreLonDon01
+                  : langType == 'zh-TW'
+                  ? pcStoreLonDon02
+                  : langType == 'en-US'
+                  ? pcStoreLonDon01
+                  : pcStoreLonDon01
+              "
+              @click="checkStore(1)"
+            />
+          </div>
+          <div class="main-every">
+            <img
+              :src="
+                langType == 'zh-CN'
+                  ? pcStoreHongKong01
+                  : langType == 'zh-TW'
+                  ? pcStoreHongKong02
+                  : langType == 'en-US'
+                  ? pcStoreHongKong01
+                  : pcStoreHongKong01
+              "
+              @click="checkStore(2)"
+            />
+          </div>
+          <div class="main-every">
+            <img
+              :src="
+                langType == 'zh-CN'
+                  ? pcStore01
+                  : langType == 'zh-TW'
+                  ? pcStore02
+                  : langType == 'en-US'
+                  ? pcStore01
+                  : pcStore01
+              "
+              @click="checkStore(3)"
+            />
+          </div>
+          <div class="main-every" style="margin-right: 0">
+            <img
+              :src="
+                langType == 'zh-CN'
+                  ? pcStorePH01
+                  : langType == 'zh-TW'
+                  ? pcStorePH02
+                  : langType == 'en-US'
+                  ? pcStorePH01
+                  : pcStorePH01
+              "
+              @click="checkStore(4)"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="app-main">
+        <div class="fourth-main-app">
+          <div class="main-every">
+            <img
+              :src="
+                langType == 'zh-CN'
+                  ? appStoreLonDon01
+                  : langType == 'zh-TW'
+                  ? appStoreLonDon02
+                  : langType == 'en-US'
+                  ? appStoreLonDon01
+                  : appStoreLonDon01
+              "
+              @click="checkStore(1)"
+            />
+          </div>
+          <div class="main-every">
+            <img
+              :src="
+                langType == 'zh-CN'
+                  ? appStoreHongKong01
+                  : langType == 'zh-TW'
+                  ? appStoreHongKong02
+                  : langType == 'en-US'
+                  ? appStoreHongKong01
+                  : appStoreHongKong01
+              "
+              @click="checkStore(2)"
+            />
+          </div>
+          <div class="main-every">
+            <img
+              :src="
+                langType == 'zh-CN'
+                  ? appStore01
+                  : langType == 'zh-TW'
+                  ? appStore02
+                  : langType == 'en-US'
+                  ? appStore01
+                  : appStore01
+              "
+              @click="checkStore(3)"
+            />
+          </div>
+          <div class="main-every" style="margin-right: 0">
+            <img
+              :src="
+                langType == 'zh-CN'
+                  ? appStorePH01
+                  : langType == 'zh-TW'
+                  ? appStorePH02
+                  : langType == 'en-US'
+                  ? appStorePH01
+                  : appStorePH01
+              "
+              @click="checkStore(4)"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div class="home-page-second">
       <div class="second-title">
-        <div class="img-left">
-          <img src="../assets/imgs/home/left.png" />
-        </div>
-        <span v-html="$t('localization.specialProjectFont')"></span>
-        <div class="img-right">
-          <img src="../assets/imgs/home/rigth.png" />
-        </div>
+        <img
+          :src="
+            langType == 'zh-CN'
+              ? treat03
+              : langType == 'zh-TW'
+              ? treat02
+              : langType == 'en-US'
+              ? treat01
+              : treat04
+          "
+        />
       </div>
       <div class="second-phone-title">
-        <span v-html="$t('localization.specialProjectFont')"></span>
+        <img
+          :src="
+            langType == 'zh-CN'
+              ? treat03
+              : langType == 'zh-TW'
+              ? treat02
+              : langType == 'en-US'
+              ? treat01
+              : treat04
+          "
+        />
       </div>
       <div class="second-main">
         <div class="main-every">
@@ -225,6 +339,30 @@
         </div>
         <div class="main-every">
           <div>
+            <img src="../assets/imgs/home/110.png" @click="listJump(11)" />
+          </div>
+          <div>
+            <p class="every-title01">
+              {{ $t("localization.skinProblemFont") }}
+            </p>
+            <div class="every-title12" v-if="langType !== 'en-US'"></div>
+          </div>
+        </div>
+        <div class="main-every">
+          <!--  @click="listJump(12)" -->
+          <div>
+            <img src="../assets/imgs/home/120.png" />
+          </div>
+          <div>
+            <p class="every-title01">
+              {{ $t("localization.faceAndBodyFont") }}
+            </p>
+            <div class="every-title13" v-if="langType !== 'en-US'"></div>
+          </div>
+        </div>
+
+        <div class="main-every">
+          <div>
             <img
               src="../assets/imgs/home/009.png"
               class="imgGetHeight"
@@ -239,7 +377,7 @@
           </div>
         </div>
         <div class="main-every">
-          <div style="position: relative;">
+          <div style="position: relative">
             <img
               src="../assets/imgs/home/100.png"
               class="imgGetHeight"
@@ -263,26 +401,37 @@
             <div class="every-title11" v-if="langType !== 'en-US'"></div>
           </div>
         </div>
-        <div class="main-every" style="margin: 0;"></div>
-        <div class="main-every" style="margin: 0;"></div>
-        <!-- <div class="main-nine" :style="{ height: imgHeight + 'px' }">
-          <p>{{ $t("localization.help01") }}</p>
-          <p>{{ $t("localization.help02") }}</p>
-        </div> -->
+        <div class="main-every" style="margin: 0"></div>
+        <div class="main-every" style="margin: 0"></div>
+        <div class="main-every" style="margin: 0"></div>
       </div>
     </div>
     <div class="home-page-third">
       <div class="second-title">
-        <div class="img-left">
-          <img src="../assets/imgs/home/left.png" />
-        </div>
-        <span v-html="$t('localization.brandListFont')"></span>
-        <div class="img-right">
-          <img src="../assets/imgs/home/rigth.png" />
-        </div>
+        <img
+          :src="
+            langType == 'zh-CN'
+              ? brand03
+              : langType == 'zh-TW'
+              ? brand02
+              : langType == 'en-US'
+              ? brand01
+              : brand04
+          "
+        />
       </div>
       <div class="second-phone-title">
-        <span v-html="$t('localization.brandListFont')"></span>
+        <img
+          :src="
+            langType == 'zh-CN'
+              ? brand03
+              : langType == 'zh-TW'
+              ? brand02
+              : langType == 'en-US'
+              ? brand01
+              : brand04
+          "
+        />
       </div>
       <div class="third-main">
         <div class="list-computer-big">
@@ -297,10 +446,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/001.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont01") }}
               </p>
             </div>
@@ -314,10 +460,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/002.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont02") }}
               </p>
             </div>
@@ -331,10 +474,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/003.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont03") }}
               </p>
             </div>
@@ -348,10 +488,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/004.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont04") }}
               </p>
             </div>
@@ -365,10 +502,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/005.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont05") }}
               </p>
             </div>
@@ -382,10 +516,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/006.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont06") }}
               </p>
             </div>
@@ -401,10 +532,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/007.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont07") }}
               </p>
             </div>
@@ -418,10 +546,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/008.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont08") }}
               </p>
             </div>
@@ -435,10 +560,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/009.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont09") }}
               </p>
             </div>
@@ -452,10 +574,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/010.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont10") }}
               </p>
             </div>
@@ -469,10 +588,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/011.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont11") }}
               </p>
             </div>
@@ -486,10 +602,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/012.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont12") }}
               </p>
             </div>
@@ -505,10 +618,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/013.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont13") }}
               </p>
             </div>
@@ -522,10 +632,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/014.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont14") }}
               </p>
             </div>
@@ -539,10 +646,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/015.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont15") }}
               </p>
             </div>
@@ -556,10 +660,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/016.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont16") }}
               </p>
             </div>
@@ -573,10 +674,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/017.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont17") }}
               </p>
             </div>
@@ -590,12 +688,93 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/018.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont18") }}
               </p>
+            </div>
+          </div>
+          <div class="brand-list-main">
+            <div
+              class="list-main-every"
+              :style="{
+                flexDirection: langType !== 'en-US' ? 'column' : 'unset',
+              }"
+              @click="checkBrandDetails(116)"
+            >
+              <div class="every-img-div">
+                <img src="../assets/imgs/logos/019.png" class="every-img" />
+              </div>
+              <p class="every-font">
+                {{ $t("localization.brandFont19") }}
+              </p>
+            </div>
+            <div
+              class="list-main-every"
+              :style="{
+                flexDirection: langType !== 'en-US' ? 'column' : 'unset',
+              }"
+              @click="checkBrandDetails(117)"
+            >
+              <div class="every-img-div">
+                <img src="../assets/imgs/logos/020.png" class="every-img" />
+              </div>
+              <p class="every-font">
+                {{ $t("localization.brandFont20") }}
+              </p>
+            </div>
+            <div
+              class="list-main-every"
+              :style="{
+                flexDirection: langType !== 'en-US' ? 'column' : 'unset',
+              }"
+              @click="checkBrandDetails(115)"
+            >
+              <div class="every-img-div">
+                <img src="../assets/imgs/logos/021.png" class="every-img" />
+              </div>
+              <p class="every-font">
+                {{ $t("localization.brandFont21") }}
+              </p>
+            </div>
+            <div
+              class="list-main-every"
+              :style="{
+                flexDirection: langType !== 'en-US' ? 'column' : 'unset',
+              }"
+              @click="checkBrandDetails(118)"
+            >
+              <div class="every-img-div">
+                <img src="../assets/imgs/logos/022.png" class="every-img" />
+              </div>
+              <p class="every-font">
+                {{ $t("localization.brandFont22") }}
+              </p>
+            </div>
+            <div
+              class="list-main-every"
+              :style="{
+                flexDirection: langType !== 'en-US' ? 'column' : 'unset',
+                cursor: 'default',
+              }"
+            >
+              <div
+                class="every-img-div"
+                style="border: none; cursor: default"
+              ></div>
+              <p class="every-font"></p>
+            </div>
+            <div
+              class="list-main-every"
+              :style="{
+                flexDirection: langType !== 'en-US' ? 'column' : 'unset',
+                cursor: 'default',
+              }"
+            >
+              <div
+                class="every-img-div"
+                style="border: none; cursor: default"
+              ></div>
+              <p class="every-font"></p>
             </div>
           </div>
         </div>
@@ -611,10 +790,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/001.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont01") }}
               </p>
             </div>
@@ -628,10 +804,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/002.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont02") }}
               </p>
             </div>
@@ -645,10 +818,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/003.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont03") }}
               </p>
             </div>
@@ -662,10 +832,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/004.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont04") }}
               </p>
             </div>
@@ -681,10 +848,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/005.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont05") }}
               </p>
             </div>
@@ -698,10 +862,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/006.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont06") }}
               </p>
             </div>
@@ -715,10 +876,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/007.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont07") }}
               </p>
             </div>
@@ -732,10 +890,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/008.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont08") }}
               </p>
             </div>
@@ -751,10 +906,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/009.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont09") }}
               </p>
             </div>
@@ -768,10 +920,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/010.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont10") }}
               </p>
             </div>
@@ -785,10 +934,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/011.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont11") }}
               </p>
             </div>
@@ -802,10 +948,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/012.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont12") }}
               </p>
             </div>
@@ -821,10 +964,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/013.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont13") }}
               </p>
             </div>
@@ -838,10 +978,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/014.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont14") }}
               </p>
             </div>
@@ -855,10 +992,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/015.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont15") }}
               </p>
             </div>
@@ -872,10 +1006,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/016.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont16") }}
               </p>
             </div>
@@ -891,10 +1022,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/017.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont17") }}
               </p>
             </div>
@@ -908,22 +1036,80 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/018.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont18") }}
               </p>
             </div>
             <div
               class="list-main-every"
-              style="background-color:transparent;"
+              :style="{
+                flexDirection: langType !== 'en-US' ? 'column' : 'unset',
+              }"
+              @click="checkBrandDetails(116)"
+            >
+              <div class="every-img-div">
+                <img src="../assets/imgs/logos/019.png" class="every-img" />
+              </div>
+              <p class="every-font">
+                {{ $t("localization.brandFont19") }}
+              </p>
+            </div>
+            <div
+              class="list-main-every"
+              :style="{
+                flexDirection: langType !== 'en-US' ? 'column' : 'unset',
+              }"
+              @click="checkBrandDetails(117)"
+            >
+              <div class="every-img-div">
+                <img src="../assets/imgs/logos/020.png" class="every-img" />
+              </div>
+              <p class="every-font">
+                {{ $t("localization.brandFont20") }}
+              </p>
+            </div>
+          </div>
+          <div class="brand-list-main">
+            <div
+              class="list-main-every"
+              :style="{
+                flexDirection: langType !== 'en-US' ? 'column' : 'unset',
+              }"
+              @click="checkBrandDetails(115)"
+            >
+              <div class="every-img-div">
+                <img src="../assets/imgs/logos/021.png" class="every-img" />
+              </div>
+              <p class="every-font">
+                {{ $t("localization.brandFont21") }}
+              </p>
+            </div>
+            <div
+              class="list-main-every"
+              :style="{
+                flexDirection: langType !== 'en-US' ? 'column' : 'unset',
+              }"
+              @click="checkBrandDetails(118)"
+            >
+              <div class="every-img-div">
+                <img src="../assets/imgs/logos/022.png" class="every-img" />
+              </div>
+              <p class="every-font">
+                {{ $t("localization.brandFont22") }}
+              </p>
+            </div>
+            <div
+              class="list-main-every"
+              style="background-color: transparent"
               :style="{
                 flexDirection: langType !== 'en-US' ? 'column' : 'unset',
                 cursor: 'default',
               }"
             >
-              <div class="every-img-div" style="border: none;"></div>
+              <div
+                class="every-img-div"
+                style="border: none; cursor: default"
+              ></div>
               <p
                 class="every-font"
                 v-if="langType !== 'en-US' && langType !== 'en-KH'"
@@ -931,13 +1117,16 @@
             </div>
             <div
               class="list-main-every"
-              style="background-color:transparent;"
+              style="background-color: transparent"
               :style="{
                 flexDirection: langType !== 'en-US' ? 'column' : 'unset',
                 cursor: 'default',
               }"
             >
-              <div class="every-img-div" style="border: none;"></div>
+              <div
+                class="every-img-div"
+                style="border: none; cursor: default"
+              ></div>
               <p
                 class="every-font"
                 v-if="langType !== 'en-US' && langType !== 'en-KH'"
@@ -957,10 +1146,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/001.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont01") }}
               </p>
             </div>
@@ -974,10 +1160,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/002.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont02") }}
               </p>
             </div>
@@ -991,10 +1174,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/003.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont03") }}
               </p>
             </div>
@@ -1010,10 +1190,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/004.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont04") }}
               </p>
             </div>
@@ -1027,10 +1204,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/005.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont05") }}
               </p>
             </div>
@@ -1044,10 +1218,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/006.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont06") }}
               </p>
             </div>
@@ -1057,10 +1228,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/007.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont07") }}
               </p>
             </div>
@@ -1074,10 +1242,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/008.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont08") }}
               </p>
             </div>
@@ -1091,10 +1256,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/009.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont09") }}
               </p>
             </div>
@@ -1110,10 +1272,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/010.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont10") }}
               </p>
             </div>
@@ -1127,10 +1286,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/011.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont11") }}
               </p>
             </div>
@@ -1144,10 +1300,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/012.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont12") }}
               </p>
             </div>
@@ -1163,10 +1316,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/013.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont13") }}
               </p>
             </div>
@@ -1180,10 +1330,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/014.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont14") }}
               </p>
             </div>
@@ -1197,10 +1344,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/015.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont15") }}
               </p>
             </div>
@@ -1216,10 +1360,7 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/016.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont16") }}
               </p>
             </div>
@@ -1228,14 +1369,12 @@
               :style="{
                 flexDirection: langType !== 'en-US' ? 'column' : 'unset',
               }"
+              @click="checkBrandDetails(92)"
             >
-              <div class="every-img-div" @click="checkBrandDetails(92)">
+              <div class="every-img-div">
                 <img src="../assets/imgs/logos/017.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont17") }}
               </p>
             </div>
@@ -1249,12 +1388,87 @@
               <div class="every-img-div">
                 <img src="../assets/imgs/logos/018.png" class="every-img" />
               </div>
-              <p
-                class="every-font"
-                v-if="langType !== 'en-US' && langType !== 'en-KH'"
-              >
+              <p class="every-font">
                 {{ $t("localization.brandFont18") }}
               </p>
+            </div>
+          </div>
+          <div class="brand-list-main">
+            <div
+              class="list-main-every"
+              :style="{
+                flexDirection: langType !== 'en-US' ? 'column' : 'unset',
+              }"
+              @click="checkBrandDetails(116)"
+            >
+              <div class="every-img-div">
+                <img src="../assets/imgs/logos/019.png" class="every-img" />
+              </div>
+              <p class="every-font">
+                {{ $t("localization.brandFont19") }}
+              </p>
+            </div>
+            <div
+              class="list-main-every"
+              :style="{
+                flexDirection: langType !== 'en-US' ? 'column' : 'unset',
+              }"
+              @click="checkBrandDetails(117)"
+            >
+              <div class="every-img-div">
+                <img src="../assets/imgs/logos/020.png" class="every-img" />
+              </div>
+              <p class="every-font">
+                {{ $t("localization.brandFont20") }}
+              </p>
+            </div>
+            <div
+              class="list-main-every"
+              :style="{
+                flexDirection: langType !== 'en-US' ? 'column' : 'unset',
+              }"
+              @click="checkBrandDetails(115)"
+            >
+              <div class="every-img-div">
+                <img src="../assets/imgs/logos/021.png" class="every-img" />
+              </div>
+              <p class="every-font">
+                {{ $t("localization.brandFont21") }}
+              </p>
+            </div>
+          </div>
+          <div class="brand-list-main">
+            <div
+              class="list-main-every"
+              :style="{
+                flexDirection: langType !== 'en-US' ? 'column' : 'unset',
+              }"
+              @click="checkBrandDetails(118)"
+            >
+              <div class="every-img-div">
+                <img src="../assets/imgs/logos/022.png" class="every-img" />
+              </div>
+              <p class="every-font">
+                {{ $t("localization.brandFont22") }}
+              </p>
+            </div>
+            <div
+              class="list-main-every"
+              :style="{
+                flexDirection: langType !== 'en-US' ? 'column' : 'unset',
+              }"
+            >
+              <div class="every-img-div" style="border: none"></div>
+              <p class="every-font"></p>
+            </div>
+            <div
+              class="list-main-every"
+              :style="{
+                flexDirection: langType !== 'en-US' ? 'column' : 'unset',
+              }"
+            >
+              <div class="every-img-div" style="border: none"></div>
+              <p class="every-font"></p>
             </div>
           </div>
         </div>
@@ -1277,31 +1491,83 @@ export default {
   inject: ["reload"],
   data() {
     return {
-      bannerHeight: 220,
+      bannerHeight: "",
       langType: localStorage.getItem("DefaultLanguage"),
-      timer: null,
-      imgHeight: 124,
+
+      pcStoreLonDon01: require("../assets/imgs/home/store01.png"),
+      pcStoreLonDon02: require("../assets/imgs/home/storetw01.png"),
+      pcStoreLonDon03: require("../assets/imgs/home/storekh01.png"),
+
+      pcStoreHongKong01: require("../assets/imgs/home/store02.png"),
+      pcStoreHongKong02: require("../assets/imgs/home/storetw02.png"),
+      pcStoreHongKong03: require("../assets/imgs/home/storekh02.png"),
+
+      pcStore01: require("../assets/imgs/home/store03.png"),
+      pcStore02: require("../assets/imgs/home/storetw03.png"),
+      pcStore03: require("../assets/imgs/home/storekh03.png"),
+
+      pcStorePH01: require("../assets/imgs/home/store04.png"),
+      pcStorePH02: require("../assets/imgs/home/storetw04.png"),
+      pcStorePH03: require("../assets/imgs/home/storekh04.png"),
+
+      appStoreLonDon01: require("../assets/imgs/home/store001.png"),
+      appStoreLonDon02: require("../assets/imgs/home/storetw001.png"),
+      appStoreLonDon03: require("../assets/imgs/home/storekh001.png"),
+
+      appStoreHongKong01: require("../assets/imgs/home/store002.png"),
+      appStoreHongKong02: require("../assets/imgs/home/storetw002.png"),
+      appStoreHongKong03: require("../assets/imgs/home/storekh002.png"),
+
+      appStore01: require("../assets/imgs/home/store003.png"),
+      appStore02: require("../assets/imgs/home/storetw003.png"),
+      appStore03: require("../assets/imgs/home/storekh003.png"),
+
+      appStorePH01: require("../assets/imgs/home/store004.png"),
+      appStorePH02: require("../assets/imgs/home/storetw004.png"),
+      appStorePH03: require("../assets/imgs/home/storekh004.png"),
+
       banner101: require("../assets/imgs/home/banner@101.png"),
       banner102: require("../assets/imgs/home/banner@102.png"),
       banner103: require("../assets/imgs/home/banner@103.png"),
+
       banner201: require("../assets/imgs/home/banner@201.png"),
       banner202: require("../assets/imgs/home/banner@202.png"),
       banner203: require("../assets/imgs/home/banner@203.png"),
+
       banner301: require("../assets/imgs/home/banner@301.png"),
       banner302: require("../assets/imgs/home/banner@302.png"),
       banner303: require("../assets/imgs/home/banner@303.png"),
+
       app101: require("../assets/imgs/home/app101.png"),
       app102: require("../assets/imgs/home/app102.png"),
       app103: require("../assets/imgs/home/app103.png"),
+
       app201: require("../assets/imgs/home/app201.png"),
       app202: require("../assets/imgs/home/app202.png"),
       app203: require("../assets/imgs/home/app203.png"),
+
       app301: require("../assets/imgs/home/app301.png"),
       app302: require("../assets/imgs/home/app302.png"),
       app303: require("../assets/imgs/home/app303.png"),
+
       only01: require("../assets/imgs/home/only.png"),
       only02: require("../assets/imgs/home/only02.png"),
       only03: require("../assets/imgs/home/only03.png"),
+
+      store01: require("../assets/imgs/home/store.png"),
+      store02: require("../assets/imgs/home/storeTitle02.png"),
+      store03: require("../assets/imgs/home/storeTitle03.png"),
+      store04: require("../assets/imgs/home/storeTitle04.png"),
+
+      treat01: require("../assets/imgs/home/treat.png"),
+      treat02: require("../assets/imgs/home/treat02.png"),
+      treat03: require("../assets/imgs/home/treat03.png"),
+      treat04: require("../assets/imgs/home/treat04.png"),
+
+      brand01: require("../assets/imgs/home/brand.png"),
+      brand02: require("../assets/imgs/home/brand02.png"),
+      brand03: require("../assets/imgs/home/brand03.png"),
+      brand04: require("../assets/imgs/home/brand04.png"),
     };
   },
   mounted() {
@@ -1313,11 +1579,17 @@ export default {
 
     this.slideBanner();
   },
-  beforeDestroy() {
-    clearTimeout(this.timer);
-    this.timer = null;
-  },
   methods: {
+    // 跳转店内详情
+    checkStore(val) {
+      this.$router.push({
+        path: "/store",
+        query: {
+          storeSel: val,
+        },
+      });
+      this.backTop();
+    },
     // 跳转项目列表
     listJump(val) {
       sessionStorage.setItem("selServicePage", val);
@@ -1393,22 +1665,20 @@ export default {
     },
     setSize() {
       // 通过图片宽度计算高度
-      if (this.$route.name === "Home") {
-        this.timer = setTimeout(() => {
-          this.imgHeight = document.getElementsByClassName(
-            "imgGetHeight"
-          )[0].height;
-          if (document.documentElement.clientWidth > 767) {
-            this.bannerHeight = document.getElementsByClassName(
-              "banner-01"
-            )[0].clientHeight;
-          } else {
-            this.bannerHeight = document.getElementsByClassName(
-              "banner-01"
-            )[1].clientHeight;
-          }
-        }, 1000);
-      }
+      this.$nextTick(() => {
+        if (document.body.clientWidth > 1200) {
+          this.bannerHeight = (document.body.clientWidth * 1000) / 1920;
+        } else if (
+          document.body.clientWidth < 1200 &&
+          document.body.clientWidth > 768
+        ) {
+          this.bannerHeight = (document.body.clientWidth * 1000) / 1920;
+        } else {
+          this.bannerHeight = (document.body.clientWidth * 420) / 750;
+        }
+
+        // document.getElementsByClassName("banner-01")[0].clientHeight;
+      });
     },
     langChange(value) {
       this.langType = value;
@@ -1472,25 +1742,29 @@ export default {
   font-family: "方正姚体";
 }
 
+.home-page-fourth {
+  .fourth-phone-title {
+    text-align: right;
+  }
+
+  .fourth-main-pc,
+  .fourth-main-app {
+    display: flex;
+    justify-content: space-between;
+
+    .main-every {
+      cursor: pointer;
+    }
+  }
+}
+
 .home-page-second {
   width: 100%;
   background-color: #fff;
 
   .second-title {
-    width: 90%;
     display: flex;
-    justify-content: center;
-    color: #755793;
-
-    img {
-      height: 18px;
-    }
-  }
-
-  .every-title01,
-  .every-title02 {
-    color: #837a8b;
-    text-align: center;
+    justify-content: flex-start;
   }
 
   .second-main {
@@ -1507,26 +1781,18 @@ export default {
   background-color: #fff;
 
   .second-title {
-    width: 90%;
     display: flex;
-    justify-content: center;
-    color: #755793;
-
-    img {
-      height: 18px;
-    }
+    justify-content: flex-start;
   }
 
   .third-main {
-    .list-computer {
-      .brand-list-main {
-        .list-main-every {
-          .every-img-div {
-            cursor: pointer;
-            .every-img {
-              width: 60% !important;
-              height: 70% !important;
-            }
+    .brand-list-main {
+      .list-main-every {
+        .every-img-div {
+          cursor: pointer;
+          .every-img {
+            width: 60% !important;
+            height: 70% !important;
           }
         }
       }
@@ -1588,19 +1854,45 @@ export default {
     }
   }
 
+  .second-title {
+    img {
+      width: 325px;
+      height: 98px;
+      object-fit: cover;
+    }
+  }
+
+  .home-page-fourth {
+    width: 80%;
+    margin: 0 auto;
+
+    .fourth-phone-title {
+      margin-top: 80px;
+
+      img {
+        width: 325px;
+        height: 98px;
+        object-fit: cover;
+      }
+    }
+
+    .app-main {
+      display: none;
+    }
+
+    .main-every {
+      margin-right: 32px;
+
+      img {
+        width: 220px;
+      }
+    }
+  }
+
   .home-page-second {
     .second-title {
-      margin: 50px auto;
-      font-size: 30px;
-      letter-spacing: 3;
-
-      .img-left {
-        margin-right: 30px;
-      }
-
-      .img-right {
-        margin-left: 30px;
-      }
+      width: 80%;
+      margin: 80px auto 15px;
     }
 
     .second-main {
@@ -1634,11 +1926,20 @@ export default {
         }
 
         .every-title02 {
+          width: 254px;
+          height: 26px;
+          margin: 0 auto;
+          // margin-top: 10px;
+          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background-size: 100%;
+        }
+
+        .every-title12 {
           width: 200px;
           height: 25px;
           margin: 0 auto;
           // margin-top: 10px;
-          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background: url("../assets/imgs/home/font11.png") no-repeat;
           background-size: 100%;
         }
 
@@ -1728,17 +2029,8 @@ export default {
 
   .home-page-third {
     .second-title {
-      margin: 20px auto 50px;
-      font-size: 30px;
-      letter-spacing: 3;
-
-      .img-left {
-        margin-right: 30px;
-      }
-
-      .img-right {
-        margin-left: 30px;
-      }
+      width: 80%;
+      margin: 50px auto 15px;
     }
 
     .third-main {
@@ -1761,7 +2053,7 @@ export default {
               display: flex;
               flex-direction: column;
               justify-content: center;
-              border: 1px solid #f0eef6;
+              border: 1px solid #bebfc2;
               text-align: center;
 
               .every-img {
@@ -1801,7 +2093,7 @@ export default {
               display: flex;
               flex-direction: column;
               justify-content: center;
-              border: 1px solid #f0eef6;
+              border: 1px solid #bebfc2;
               text-align: center;
 
               .every-img {
@@ -1890,19 +2182,42 @@ export default {
     }
   }
 
+  .second-title {
+    img {
+      width: 325px;
+      height: 98px;
+      object-fit: cover;
+    }
+  }
+  .home-page-fourth {
+    width: 80%;
+    margin: 0 auto;
+
+    .fourth-phone-title {
+      margin-top: 80px;
+
+      img {
+        width: 325px;
+        height: 98px;
+        object-fit: cover;
+      }
+    }
+    .app-main {
+      display: none;
+    }
+    .main-every {
+      margin-right: 32px;
+
+      img {
+        width: 220px;
+      }
+    }
+  }
+
   .home-page-second {
     .second-title {
-      margin: 50px auto;
-      font-size: 30px;
-      letter-spacing: 3;
-
-      .img-left {
-        margin-right: 30px;
-      }
-
-      .img-right {
-        margin-left: 30px;
-      }
+      width: 80%;
+      margin: 80px auto 15px;
     }
 
     .second-main {
@@ -1936,11 +2251,20 @@ export default {
         }
 
         .every-title02 {
+          width: 254px;
+          height: 26px;
+          margin: 0 auto;
+          // margin-top: 10px;
+          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background-size: 100%;
+        }
+
+        .every-title12 {
           width: 200px;
           height: 25px;
           margin: 0 auto;
           // margin-top: 10px;
-          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background: url("../assets/imgs/home/font11.png") no-repeat;
           background-size: 100%;
         }
 
@@ -2030,17 +2354,8 @@ export default {
 
   .home-page-third {
     .second-title {
-      margin: 20px auto 50px;
-      font-size: 30px;
-      letter-spacing: 3;
-
-      .img-left {
-        margin-right: 30px;
-      }
-
-      .img-right {
-        margin-left: 30px;
-      }
+      width: 80%;
+      margin: 50px auto 15px;
     }
 
     .third-main {
@@ -2064,7 +2379,7 @@ export default {
               display: flex;
               flex-direction: column;
               justify-content: center;
-              border: 1px solid #f0eef6;
+              border: 1px solid #bebfc2;
               text-align: center;
 
               .every-img {
@@ -2104,7 +2419,7 @@ export default {
               display: flex;
               flex-direction: column;
               justify-content: center;
-              border: 1px solid #f0eef6;
+              border: 1px solid #bebfc2;
               text-align: center;
 
               .every-img {
@@ -2193,19 +2508,42 @@ export default {
     }
   }
 
+  .second-title {
+    img {
+      width: 325px;
+      height: 98px;
+      object-fit: cover;
+    }
+  }
+  .home-page-fourth {
+    width: 85%;
+    margin: 0 auto;
+
+    .fourth-phone-title {
+      margin-top: 80px;
+
+      img {
+        width: 325px;
+        height: 98px;
+        object-fit: cover;
+      }
+    }
+    .app-main {
+      display: none;
+    }
+    .main-every {
+      margin-right: 32px;
+
+      img {
+        width: 220px;
+      }
+    }
+  }
+
   .home-page-second {
     .second-title {
-      margin: 50px auto;
-      font-size: 30px;
-      letter-spacing: 3;
-
-      .img-left {
-        margin-right: 30px;
-      }
-
-      .img-right {
-        margin-left: 30px;
-      }
+      width: 85%;
+      margin: 80px auto 15px;
     }
 
     .second-main {
@@ -2238,11 +2576,20 @@ export default {
         }
 
         .every-title02 {
+          width: 254px;
+          height: 26px;
+          margin: 0 auto;
+          // margin-top: 10px;
+          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background-size: 100%;
+        }
+
+        .every-title12 {
           width: 200px;
           height: 25px;
           margin: 0 auto;
           // margin-top: 10px;
-          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background: url("../assets/imgs/home/font11.png") no-repeat;
           background-size: 100%;
         }
 
@@ -2332,17 +2679,8 @@ export default {
 
   .home-page-third {
     .second-title {
-      margin: 20px auto 50px;
-      font-size: 30px;
-      letter-spacing: 3;
-
-      .img-left {
-        margin-right: 30px;
-      }
-
-      .img-right {
-        margin-left: 30px;
-      }
+      width: 85%;
+      margin: 50px auto 15px;
     }
 
     .third-main {
@@ -2369,7 +2707,7 @@ export default {
               display: flex;
               flex-direction: column;
               justify-content: center;
-              border: 1px solid #f0eef6;
+              border: 1px solid #bebfc2;
               text-align: center;
 
               .every-img {
@@ -2458,19 +2796,42 @@ export default {
     }
   }
 
+  .second-title {
+    img {
+      width: 325px;
+      height: 98px;
+      object-fit: cover;
+    }
+  }
+  .home-page-fourth {
+    width: 85%;
+    margin: 0 auto;
+
+    .fourth-phone-title {
+      margin-top: 80px;
+
+      img {
+        width: 325px;
+        height: 98px;
+        object-fit: cover;
+      }
+    }
+    .app-main {
+      display: none;
+    }
+    .main-every {
+      margin-right: 32px;
+
+      img {
+        width: 220px;
+      }
+    }
+  }
+
   .home-page-second {
     .second-title {
-      margin: 50px auto;
-      font-size: 30px;
-      letter-spacing: 3;
-
-      .img-left {
-        margin-right: 30px;
-      }
-
-      .img-right {
-        margin-left: 30px;
-      }
+      width: 85%;
+      margin: 80px auto 15px;
     }
 
     .second-main {
@@ -2503,11 +2864,20 @@ export default {
         }
 
         .every-title02 {
+          width: 254px;
+          height: 26px;
+          margin: 0 auto;
+          // margin-top: 10px;
+          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background-size: 100%;
+        }
+
+        .every-title12 {
           width: 200px;
           height: 25px;
           margin: 0 auto;
           // margin-top: 10px;
-          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background: url("../assets/imgs/home/font11.png") no-repeat;
           background-size: 100%;
         }
 
@@ -2597,17 +2967,8 @@ export default {
 
   .home-page-third {
     .second-title {
-      margin: 20px auto 50px;
-      font-size: 30px;
-      letter-spacing: 3;
-
-      .img-left {
-        margin-right: 30px;
-      }
-
-      .img-right {
-        margin-left: 30px;
-      }
+      width: 85%;
+      margin: 50px auto 15px;
     }
 
     .third-main {
@@ -2634,7 +2995,7 @@ export default {
               display: flex;
               flex-direction: column;
               justify-content: center;
-              border: 1px solid #f0eef6;
+              border: 1px solid #bebfc2;
               text-align: center;
 
               .every-img {
@@ -2723,19 +3084,43 @@ export default {
     }
   }
 
+  .second-title {
+    img {
+      width: 325px;
+      height: 98px;
+      object-fit: cover;
+    }
+  }
+
+  .home-page-fourth {
+    width: 85%;
+    margin: 0 auto;
+
+    .fourth-phone-title {
+      margin-top: 60px;
+
+      img {
+        width: 325px;
+        height: 98px;
+        object-fit: cover;
+      }
+    }
+    .app-main {
+      display: none;
+    }
+    .main-every {
+      margin-right: 32px;
+
+      img {
+        width: 190px;
+      }
+    }
+  }
+
   .home-page-second {
     .second-title {
-      margin: 50px auto;
-      font-size: 30px;
-      letter-spacing: 3;
-
-      .img-left {
-        margin-right: 30px;
-      }
-
-      .img-right {
-        margin-left: 30px;
-      }
+      width: 85%;
+      margin: 60px auto 15px;
     }
 
     .second-main {
@@ -2768,11 +3153,20 @@ export default {
         }
 
         .every-title02 {
+          width: 254px;
+          height: 26px;
+          margin: 0 auto;
+          // margin-top: 10px;
+          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background-size: 100%;
+        }
+
+        .every-title12 {
           width: 200px;
           height: 25px;
           margin: 0 auto;
           // margin-top: 10px;
-          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background: url("../assets/imgs/home/font11.png") no-repeat;
           background-size: 100%;
         }
 
@@ -2862,17 +3256,8 @@ export default {
 
   .home-page-third {
     .second-title {
-      margin: 20px auto 50px;
-      font-size: 30px;
-      letter-spacing: 3;
-
-      .img-left {
-        margin-right: 30px;
-      }
-
-      .img-right {
-        margin-left: 30px;
-      }
+      width: 85%;
+      margin: 30px auto 15px;
     }
 
     .third-main {
@@ -2899,7 +3284,7 @@ export default {
               display: flex;
               flex-direction: column;
               justify-content: center;
-              border: 1px solid #f0eef6;
+              border: 1px solid #bebfc2;
               text-align: center;
 
               .every-img {
@@ -2949,7 +3334,7 @@ export default {
   }
 
   .home-page-first {
-    margin-top: 60px;
+    margin-top: 80px;
 
     .banner01-font {
       top: 35%;
@@ -2991,19 +3376,49 @@ export default {
     }
   }
 
+  .second-title {
+    img {
+      width: 280px;
+      height: 98px;
+      object-fit: cover;
+    }
+  }
+
+  .home-page-fourth {
+    width: 85%;
+    margin: 0 auto;
+
+    .fourth-phone-title {
+      margin-top: 40px;
+
+      img {
+        width: 280px;
+        height: 98px;
+        object-fit: cover;
+      }
+    }
+    .app-main {
+      display: none;
+    }
+    .fourth-main-pc {
+      padding: 0 15px;
+
+      .main-every {
+        margin-right: 11px;
+
+        img {
+          width: 100%;
+          // height: auto;
+          // object-fit: cover;
+        }
+      }
+    }
+  }
+
   .home-page-second {
     .second-title {
-      margin: 50px auto;
-      font-size: 30px;
-      letter-spacing: 3;
-
-      .img-left {
-        margin-right: 30px;
-      }
-
-      .img-right {
-        margin-left: 30px;
-      }
+      width: 85%;
+      margin: 30px auto 15px;
     }
 
     .second-main {
@@ -3036,11 +3451,20 @@ export default {
         }
 
         .every-title02 {
+          width: 254px;
+          height: 26px;
+          margin: 0 auto;
+          // margin-top: 10px;
+          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background-size: 100%;
+        }
+
+        .every-title12 {
           width: 200px;
           height: 25px;
           margin: 0 auto;
           // margin-top: 10px;
-          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background: url("../assets/imgs/home/font11.png") no-repeat;
           background-size: 100%;
         }
 
@@ -3130,17 +3554,8 @@ export default {
 
   .home-page-third {
     .second-title {
-      margin: 20px auto 50px;
-      font-size: 30px;
-      letter-spacing: 3;
-
-      .img-left {
-        margin-right: 30px;
-      }
-
-      .img-right {
-        margin-left: 30px;
-      }
+      width: 85%;
+      margin: 0 auto 15px;
     }
 
     .third-main {
@@ -3167,7 +3582,7 @@ export default {
               display: flex;
               flex-direction: column;
               justify-content: center;
-              border: 1px solid #f0eef6;
+              border: 1px solid #bebfc2;
               text-align: center;
 
               .every-img {
@@ -3259,35 +3674,67 @@ export default {
     }
   }
 
+  .second-title {
+    img {
+      width: 280px;
+      height: 98px;
+      object-fit: cover;
+    }
+  }
+
+  .home-page-fourth {
+    .fourth-phone-title {
+      margin-top: 40px;
+      text-align: right;
+
+      img {
+        width: 280px;
+        height: 98px;
+        object-fit: cover;
+      }
+    }
+
+    .app-main {
+      display: block;
+      padding: 0 15px;
+
+      .main-every {
+        margin-right: 11px;
+
+        img {
+          width: 100%;
+          // height: auto;
+          // object-fit: cover;
+        }
+      }
+    }
+
+    .pc-main {
+      display: none;
+    }
+  }
+
+  .second-title {
+    img {
+      width: 280px;
+      height: 98px;
+      object-fit: cover;
+    }
+  }
   .home-page-second {
     .second-phone-title {
-      display: block;
-      width: 100%;
-      height: 32px;
-      margin: 25px auto;
-      line-height: 32px;
-      color: #fff;
-      background-color: #755793;
-      font-size: 16px;
+      margin: 30px auto 15px;
+      text-align: left;
+
+      img {
+        width: 280px;
+        height: 98px;
+        object-fit: cover;
+      }
     }
 
     .second-title {
       display: none;
-      margin: 20px auto;
-      font-size: 18px;
-      letter-spacing: 3;
-
-      .img-left {
-        margin-right: 10px;
-      }
-
-      .img-right {
-        margin-left: 10px;
-      }
-
-      img {
-        height: 12px;
-      }
     }
 
     .second-main {
@@ -3324,13 +3771,22 @@ export default {
         }
 
         .every-title02 {
-          width: 85%;
+          // width: 85%;
           height: 17px;
           margin: 0 auto;
           margin-top: 3px;
           background: url("../assets/imgs/font/Whitening&PigmentRemoval@2x.png")
             no-repeat;
           background-size: 100% auto;
+        }
+
+        .every-title12 {
+          width: 85%;
+          height: 17px;
+          margin: 0 auto;
+          margin-top: 3px;
+          background: url("../assets/imgs/font/skinProblem.png") no-repeat;
+          background-size: 100%;
         }
 
         .every-title03 {
@@ -3424,7 +3880,7 @@ export default {
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        border: 1px solid #f0eef6;
+        border: 1px solid #bebfc2;
         color: #837a8b;
         font-size: 12px;
       }
@@ -3433,34 +3889,18 @@ export default {
 
   .home-page-third {
     .second-phone-title {
-      display: block;
-      width: 100%;
-      height: 32px;
-      margin: 25px auto;
-      margin-top: 20px;
-      line-height: 32px;
-      color: #fff;
-      background-color: #755793;
-      font-size: 16px;
+      margin: 15px auto 15px;
+      text-align: left;
+
+      img {
+        width: 280px;
+        height: 98px;
+        object-fit: cover;
+      }
     }
 
     .second-title {
       display: none;
-      margin: 0 auto 20px;
-      font-size: 18px;
-      letter-spacing: 3;
-
-      .img-left {
-        margin-right: 10px;
-      }
-
-      .img-right {
-        margin-left: 10px;
-      }
-
-      img {
-        height: 12px;
-      }
     }
 
     .third-main {
@@ -3493,7 +3933,7 @@ export default {
               display: flex;
               flex-direction: column;
               justify-content: center;
-              border: 1px solid #f0eef6;
+              border: 1px solid #bebfc2;
               text-align: center;
 
               .every-img {

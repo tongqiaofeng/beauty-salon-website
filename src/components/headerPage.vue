@@ -4,14 +4,13 @@
       <div class="top-computer">
         <div class="header-container">
           <div class="header-page-top-img">
-            <!-- routeName === 'Service' || routeName === 'Share' ? img1 : (routeName === 'Contact' || routeName === 'Details' ? img3 : img2) -->
             <router-link to="/"
               ><img
                 class="img-responsives"
                 src="../assets/imgs/header/logo_main.png"
             /></router-link>
           </div>
-          <div style="display: flex;">
+          <div style="display: flex">
             <nav class="navbar navbar-expand-lg navbar-light">
               <button
                 class="navbar-toggler"
@@ -24,8 +23,7 @@
                 @click="toggleClick"
               >
                 <span class="navbar-toggler-icon">
-                  <!-- routeName === 'Contact' || routeName === 'Details' || routeName === 'Service' || routeName === 'Share' ? lineImg2: lineImg1 -->
-                  <img style="width: 30px;height: 20px;" :src="lineImg2" />
+                  <img style="width: 30px; height: 20px" :src="lineImg2" />
                 </span>
               </button>
               <div class="header-page-top-nav">
@@ -42,10 +40,11 @@
                         :class="
                           routeName === 'Contact' ||
                           routeName === 'Details' ||
-                          routeName === 'Service' ||
                           routeName === 'List'
                             ? 'nav-contact'
-                            : routeName === 'Share' || routeName === 'Home'
+                            : routeName === 'Share' ||
+                              routeName === 'Home' ||
+                              routeName === 'Service'
                             ? 'nav-blank'
                             : 'nav-white'
                         "
@@ -63,10 +62,11 @@
                         :class="
                           routeName === 'Contact' ||
                           routeName === 'Details' ||
-                          routeName === 'Service' ||
                           routeName === 'List'
                             ? 'nav-contact'
-                            : routeName === 'Share' || routeName === 'Home'
+                            : routeName === 'Share' ||
+                              routeName === 'Home' ||
+                              routeName === 'Service'
                             ? 'nav-blank'
                             : 'nav-white'
                         "
@@ -76,17 +76,18 @@
                       >
                     </li>
                     <li
-                      :class="{ 'contact-active': routeName === 'Service' }"
+                      :class="{ 'blank-active': routeName === 'Service' }"
                       class="nav-item nav-margin min-liHome"
                     >
                       <router-link
                         :class="
                           routeName === 'Contact' ||
                           routeName === 'Details' ||
-                          routeName === 'Service' ||
                           routeName === 'List'
                             ? 'nav-contact'
-                            : routeName === 'Share' || routeName === 'Home'
+                            : routeName === 'Share' ||
+                              routeName === 'Home' ||
+                              routeName === 'Service'
                             ? 'nav-blank'
                             : 'nav-white'
                         "
@@ -103,10 +104,11 @@
                         :class="
                           routeName === 'Contact' ||
                           routeName === 'Details' ||
-                          routeName === 'Service' ||
                           routeName === 'List'
                             ? 'nav-contact'
-                            : routeName === 'Share' || routeName === 'Home'
+                            : routeName === 'Share' ||
+                              routeName === 'Home' ||
+                              routeName === 'Service'
                             ? 'nav-blank'
                             : 'nav-white'
                         "
@@ -123,10 +125,11 @@
                         :class="
                           routeName === 'Contact' ||
                           routeName === 'Details' ||
-                          routeName === 'Service' ||
                           routeName === 'List'
                             ? 'nav-contact'
-                            : routeName === 'Share' || routeName === 'Home'
+                            : routeName === 'Share' ||
+                              routeName === 'Home' ||
+                              routeName === 'Service'
                             ? 'nav-blank'
                             : 'nav-white'
                         "
@@ -141,7 +144,7 @@
             </nav>
             <div class="nav-margin language-style">
               <el-dropdown trigger="click" @command="switchLanguage">
-                <div class="lang-icon" style="display: flex;">
+                <div class="lang-icon" style="display: flex">
                   <span class="el-dropdown-link">
                     <img
                       :src="
@@ -153,7 +156,7 @@
                           ? country3
                           : country4
                       "
-                      style="width: 20px;height: 14px;"
+                      style="width: 20px; height: 14px"
                     />
                   </span>
                 </div>
@@ -166,7 +169,12 @@
                     <a class="dropdown_a">
                       <img
                         :src="item.img"
-                        style="width: 17px;height: 12px;margin-top: -4px;margin-right: 3px;"
+                        style="
+                          width: 17px;
+                          height: 12px;
+                          margin-top: -4px;
+                          margin-right: 3px;
+                        "
                       />
                       <span :class="{ selected: selectLang == item.value }">{{
                         item.label
@@ -181,7 +189,7 @@
       </div>
       <div class="top-phone">
         <div class="header-container">
-          <div style="width: 25px;display: flex;">
+          <div style="width: 25px; display: flex">
             <nav class="navbar navbar-expand-lg navbar-light">
               <button
                 class="navbar-toggler"
@@ -195,7 +203,7 @@
               >
                 <span class="navbar-toggler-icon">
                   <!-- routeName === 'Contact' || routeName === 'Details' || routeName === 'Service' || routeName === 'Share' ? lineImg2: lineImg1 -->
-                  <img style="width: 20px;height: 16px;" :src="lineImg2" />
+                  <img style="width: 20px; height: 16px" :src="lineImg2" />
                 </span>
               </button>
               <div class="header-page-top-nav">
@@ -318,7 +326,7 @@
                           ? country3
                           : country4
                       "
-                      style="width: 20px;height: 14px;"
+                      style="width: 20px; height: 14px"
                     />
                   </span>
                 </div>
@@ -331,7 +339,12 @@
                     <a class="dropdown_a">
                       <img
                         :src="item.img"
-                        style="width: 17px;height: 12px;margin-top: -4px;margin-right: 3px;"
+                        style="
+                          width: 17px;
+                          height: 12px;
+                          margin-top: -4px;
+                          margin-right: 3px;
+                        "
                       />
                       <span :class="{ selected: selectLang == item.value }">{{
                         item.label
@@ -363,7 +376,7 @@
                         ? country3
                         : country4
                     "
-                    style="width: 20px;height: 14px;"
+                    style="width: 20px; height: 14px"
                   />
                 </span>
               </div>
@@ -376,7 +389,12 @@
                   <a class="dropdown_a">
                     <img
                       :src="item.img"
-                      style="width: 17px;height: 12px;margin-top: -4px;margin-right: 3px;"
+                      style="
+                        width: 17px;
+                        height: 12px;
+                        margin-top: -4px;
+                        margin-right: 3px;
+                      "
                     />
                     <span :class="{ selected: selectLang == item.value }">{{
                       item.label
@@ -389,13 +407,8 @@
         </div>
       </div>
     </div>
-    <div>
+    <div class="phone-header-container">
       <div class="phone-header">
-        <!-- <div class="phone-top">
-        <p class="phone-top-x" @click="closeClick">
-          <img src="../assets/imgs/home/close.png" class="phone-top-img" />
-        </p>
-      </div> -->
         <div class="phone-main">
           <ul>
             <li class="phone-main-every" @click="goTop">
@@ -405,7 +418,11 @@
                 to="/"
                 exact
               >
-                {{ $t("localization.homeFont") }}
+                <img
+                  :src="routeName === 'Home' ? indexImg : indexImg02"
+                  class="every-img"
+                />
+                <span>{{ $t("localization.homeFont") }}</span>
               </router-link>
             </li>
             <li class="phone-main-every" @click="goTop">
@@ -414,8 +431,12 @@
                 :class="{ phoneClick: routeName === 'About' }"
                 to="/about"
               >
-                {{ $t("localization.aboutFont") }}</router-link
-              >
+                <img
+                  :src="routeName === 'About' ? aboutImg : aboutImg02"
+                  class="every-img"
+                />
+                <span>{{ $t("localization.aboutFont") }}</span>
+              </router-link>
             </li>
             <li class="phone-main-every" @click="goTop">
               <router-link
@@ -423,8 +444,12 @@
                 :class="{ phoneClick: routeName === 'Service' }"
                 to="/service"
               >
-                {{ $t("localization.treatmentFont") }}</router-link
-              >
+                <img
+                  :src="routeName === 'Service' ? serviceImg : serviceImg02"
+                  class="every-img"
+                />
+                <span>{{ $t("localization.treatmentFont") }}</span>
+              </router-link>
             </li>
             <li class="phone-main-every" @click="goTop">
               <router-link
@@ -432,8 +457,12 @@
                 :class="{ phoneClick: routeName === 'News' }"
                 to="/news"
               >
-                {{ $t("localization.newsFont") }}</router-link
-              >
+                <img
+                  :src="routeName === 'News' ? newsImg : newsImg02"
+                  class="every-img"
+                />
+                <span>{{ $t("localization.newsFont") }}</span>
+              </router-link>
             </li>
             <li class="phone-main-every" @click="goTop">
               <router-link
@@ -441,8 +470,12 @@
                 :class="{ phoneClick: routeName === 'Contact' }"
                 to="/contact"
               >
-                {{ $t("localization.contactFont") }}</router-link
-              >
+                <img
+                  :src="routeName === 'Contact' ? contactImg : contactImg02"
+                  class="every-img"
+                />
+                <span>{{ $t("localization.contactFont") }}</span>
+              </router-link>
             </li>
           </ul>
         </div>
@@ -478,6 +511,17 @@ export default {
       img1: require("../assets/imgs/home/logo_top.png"),
       img2: require("../assets/imgs/about/logo_white.png"),
       img3: require("../assets/imgs/contact/logo_contact.png"),
+      indexImg: require("../assets/imgs/header/index.png"),
+      indexImg02: require("../assets/imgs/header/index02.png"),
+      aboutImg: require("../assets/imgs/header/about.png"),
+      aboutImg02: require("../assets/imgs/header/about02.png"),
+      serviceImg: require("../assets/imgs/header/service.png"),
+      serviceImg02: require("../assets/imgs/header/service02.png"),
+      newsImg: require("../assets/imgs/header/news.png"),
+      newsImg02: require("../assets/imgs/header/news02.png"),
+      contactImg: require("../assets/imgs/header/contact.png"),
+      contactImg02: require("../assets/imgs/header/contact02.png"),
+
       langImg1: require("../assets/imgs/home/lang.png"),
       langImg2: require("../assets/imgs/contact/lang_con.png"),
       langImg3: require("../assets/imgs/service/lang_blank.png"),
@@ -538,17 +582,18 @@ export default {
     },
     toggleClick() {
       this.selectPage = 1;
-      document.getElementsByClassName("phone-header")[0].style.transform =
-        "translate(0, 0)";
-      document.getElementsByClassName("phone-header")[0].style.transition =
-        "all 500ms";
-      document.getElementsByClassName("hidden-div")[0].style.display = "block";
+      document.getElementsByClassName(
+        "phone-header-container"
+      )[0].style.transform = "translate(0, 0)";
+      document.getElementsByClassName(
+        "phone-header-container"
+      )[0].style.transition = "all 500ms";
     },
     closeClick() {
       this.selectPage = 0;
-      document.getElementsByClassName("phone-header")[0].style.transform =
-        "translate(-101%, 0)";
-      document.getElementsByClassName("hidden-div")[0].style.display = "";
+      document.getElementsByClassName(
+        "phone-header-container"
+      )[0].style.transform = "translate(-101%, 0)";
     },
     switchLanguage(value) {
       console.log(value);
@@ -700,57 +745,81 @@ export default {
     }
   }
 
-  .hidden-div {
-    width: 49%;
-    min-height: 600px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: transparent;
-  }
-
-  .phone-header {
-    width: 50%;
-    height: 100%;
-    overflow-y: hidden;
+  .phone-header-container {
     position: fixed;
     top: 0;
     left: 0;
     right: auto;
-    background-color: #755793;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    z-index: 999999;
     transform: translate(-101%, 0);
 
-    .phone-top {
-      padding-right: 20px;
-      display: flex;
-      justify-content: flex-end;
-
-      .phone-top-x {
-        cursor: pointer;
-      }
+    .hidden-div {
+      width: 50%;
+      min-height: 600px;
+      background-color: rgba(40, 33, 41, 0.4);
     }
 
-    .phone-main {
-      text-align: left;
+    .phone-header {
+      width: 50%;
+      height: 100%;
+      padding-top: 56px;
+      overflow-y: hidden;
+      background-color: #281429;
 
-      ul {
-        padding: 0;
-        margin: 0;
+      .phone-top {
+        padding-right: 20px;
+        display: flex;
+        justify-content: flex-end;
 
-        .phone-main-every a:hover {
-          color: #fff;
-          font-weight: bold;
+        .phone-top-x {
+          cursor: pointer;
         }
       }
-    }
 
-    .oldType {
-      color: #beb1cb;
-    }
+      .phone-main {
+        text-align: left;
 
-    .phoneClick {
-      color: #fff;
-      // font-weight: bold;
+        ul {
+          padding: 0;
+          margin: 0;
+
+          .phone-main-every a:hover {
+            color: #fff;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .oldType {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 23px;
+        color: #beb1cb;
+        border-left: 3px solid #281429;
+        font-size: 12px;
+
+        .every-img {
+          width: 15px;
+          height: 15px;
+          margin-right: 16px;
+          vertical-align: middle;
+        }
+
+        span {
+          vertical-align: middle;
+        }
+      }
+
+      .phoneClick {
+        color: #fff;
+        border-left: 3px solid #9e52a1;
+        background: url("../assets/imgs/header/selBack.png");
+        box-sizing: border-box;
+      }
     }
   }
 }
@@ -812,10 +881,6 @@ export default {
       margin-top: 10px;
     }
   }
-
-  .hidden-div {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 1499px) and (max-width: 1780px) {
@@ -837,10 +902,6 @@ export default {
     .lang-icon {
       margin-top: 10px;
     }
-  }
-
-  .hidden-div {
-    display: none;
   }
 }
 
@@ -872,10 +933,6 @@ export default {
       margin-top: 10px;
     }
   }
-
-  .hidden-div {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1500px) {
@@ -897,10 +954,6 @@ export default {
     .lang-icon {
       margin-top: 10px;
     }
-  }
-
-  .hidden-div {
-    display: none;
   }
 }
 
@@ -936,10 +989,6 @@ export default {
     .lang-icon {
       margin-top: 10px;
     }
-  }
-
-  .hidden-div {
-    display: none;
   }
 }
 
@@ -991,14 +1040,7 @@ export default {
     }
   }
 
-  .hidden-div {
-    display: none;
-  }
-
   .phone-header {
-    min-height: 600px;
-    padding: 30px 0px 0 30px;
-
     .phone-top {
       .phone-top-x {
         font-size: 20px;
@@ -1011,10 +1053,10 @@ export default {
     }
 
     .phone-main {
-      margin-top: 30px;
-
       .phone-main-every {
-        margin-bottom: 20px;
+        height: 46px;
+        line-height: 46px;
+        margin-bottom: 11px;
 
         a {
           font-size: 16px;
@@ -1084,13 +1126,7 @@ export default {
     }
   }
 
-  .hidden-div {
-    display: none;
-  }
-
   .phone-header {
-    padding: 15px 0px 0 0;
-
     .phone-top {
       .phone-top-x {
         font-size: 20px;
@@ -1103,10 +1139,10 @@ export default {
     }
 
     .phone-main {
-      margin-top: 30px;
-
       .phone-main-every {
-        margin-top: 25px;
+        height: 46px;
+        line-height: 46px;
+        margin-bottom: 11px;
         text-align: center;
 
         a {

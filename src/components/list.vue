@@ -4,122 +4,9 @@
       <headerPage @langChange="langChange"></headerPage>
     </div>
     <div class="news-page-first">
-      <img
-        :src="
-          listSel == 1
-            ? img1
-            : listSel == 2
-            ? img2
-            : listSel == 3
-            ? img3
-            : listSel == 4
-            ? img4
-            : listSel == 5
-            ? img5
-            : listSel == 6
-            ? img6
-            : listSel == 7
-            ? img7
-            : listSel == 8
-            ? img8
-            : listSel == 9
-            ? img9
-            : img10
-        "
-        class="first-img"
-      />
+      <img :src="imgUrl(listSel, langType)" class="first-img" />
     </div>
     <div class="list-page-second">
-      <div class="second-title">
-        <div class="img-left">
-          <img src="../assets/imgs/home/left.png" />
-        </div>
-        <span
-          v-if="listSel == 1"
-          v-html="$t('localization.whiteningBeautyCreamFont01')"
-        ></span>
-        <span
-          v-if="listSel == 2"
-          v-html="$t('localization.fightDeclineAscensionFont01')"
-        ></span>
-        <span
-          v-if="listSel == 3"
-          v-html="$t('localization.cleanTheFillingWaterFont01')"
-        ></span>
-        <span
-          v-if="listSel == 4"
-          v-html="$t('localization.raiseHairFont01')"
-        ></span>
-        <span
-          v-if="listSel == 5"
-          v-html="$t('localization.privateRaiseFont01')"
-        ></span>
-        <span
-          v-if="listSel == 6"
-          v-html="$t('localization.managementFont01')"
-        ></span>
-        <span
-          v-if="listSel == 7"
-          v-html="$t('localization.injectionFont01')"
-        ></span>
-        <span
-          v-if="listSel == 8"
-          v-html="$t('localization.shrinkPoresFont01')"
-        ></span>
-        <span
-          v-if="listSel == 9"
-          v-html="$t('localization.otherFont01')"
-        ></span>
-        <span
-          v-if="listSel == 10"
-          v-html="$t('localization.membersOnlyFont01')"
-        ></span>
-        <div class="img-right">
-          <img src="../assets/imgs/home/rigth.png" />
-        </div>
-      </div>
-      <div class="second-phone-title">
-        <span
-          v-if="listSel == 1"
-          v-html="$t('localization.whiteningBeautyCreamFont01')"
-        ></span>
-        <span
-          v-if="listSel == 2"
-          v-html="$t('localization.fightDeclineAscensionFont01')"
-        ></span>
-        <span
-          v-if="listSel == 3"
-          v-html="$t('localization.cleanTheFillingWaterFont01')"
-        ></span>
-        <span
-          v-if="listSel == 4"
-          v-html="$t('localization.raiseHairFont01')"
-        ></span>
-        <span
-          v-if="listSel == 5"
-          v-html="$t('localization.privateRaiseFont01')"
-        ></span>
-        <span
-          v-if="listSel == 6"
-          v-html="$t('localization.managementFont01')"
-        ></span>
-        <span
-          v-if="listSel == 7"
-          v-html="$t('localization.injectionFont01')"
-        ></span>
-        <span
-          v-if="listSel == 8"
-          v-html="$t('localization.shrinkPoresFont01')"
-        ></span>
-        <span
-          v-if="listSel == 9"
-          v-html="$t('localization.otherFont01')"
-        ></span>
-        <span
-          v-if="listSel == 10"
-          v-html="$t('localization.membersOnlyFont01')"
-        ></span>
-      </div>
       <div v-if="listSel == 1" class="second-main">
         <div class="details-every" @click="checkServiceDetails(69)">
           <div class="details-font">
@@ -276,12 +163,6 @@
           </div>
         </div>
         <div class="details-every" @click="checkServiceDetails(64)">
-          <div class="details-font">{{ $t("localization.cleanFourFont") }}</div>
-          <div class="details-img">
-            <img src="../assets/imgs/serviceList/right.png" />
-          </div>
-        </div>
-        <div class="details-every" @click="checkServiceDetails(64)">
           <div class="details-font">{{ $t("localization.cleanFiveFont") }}</div>
           <div class="details-img">
             <img src="../assets/imgs/serviceList/right.png" />
@@ -326,14 +207,6 @@
         <div class="details-every" @click="checkServiceDetails(69)">
           <div class="details-font">
             {{ $t("localization.privateTwoFont") }}
-          </div>
-          <div class="details-img">
-            <img src="../assets/imgs/serviceList/right.png" />
-          </div>
-        </div>
-        <div class="details-every" @click="checkServiceDetails(91)">
-          <div class="details-font">
-            {{ $t("localization.privateThreeFont") }}
           </div>
           <div class="details-img">
             <img src="../assets/imgs/serviceList/right.png" />
@@ -425,14 +298,6 @@
         </div>
         <div class="details-every" @click="checkServiceDetails(62)">
           <div class="details-font">{{ $t("localization.shrinkTwoFont") }}</div>
-          <div class="details-img">
-            <img src="../assets/imgs/serviceList/right.png" />
-          </div>
-        </div>
-        <div class="details-every" @click="checkServiceDetails(89)">
-          <div class="details-font">
-            {{ $t("localization.shrinkFourFont") }}
-          </div>
           <div class="details-img">
             <img src="../assets/imgs/serviceList/right.png" />
           </div>
@@ -540,8 +405,34 @@
           </div>
         </div>
       </div>
+      <div v-if="listSel == 11" class="second-main">
+        <div class="details-every" @click="checkServiceDetails(116)">
+          <div class="details-font">
+            {{ $t("localization.skinProblemOneFont") }}
+          </div>
+          <div class="details-img">
+            <img src="../assets/imgs/serviceList/right.png" />
+          </div>
+        </div>
+        <div class="details-every" @click="checkServiceDetails(117)">
+          <div class="details-font">
+            {{ $t("localization.skinProblemTwoFont") }}
+          </div>
+          <div class="details-img">
+            <img src="../assets/imgs/serviceList/right.png" />
+          </div>
+        </div>
+        <div class="details-every" @click="checkServiceDetails(118)">
+          <div class="details-font">
+            {{ $t("localization.skinProblemThreeFont") }}
+          </div>
+          <div class="details-img">
+            <img src="../assets/imgs/serviceList/right.png" />
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
+    <div style="position: absolute;bottom: 0;left: 0;right: 0;">
       <footerPage></footerPage>
     </div>
   </div>
@@ -560,22 +451,164 @@ export default {
     return {
       langType: localStorage.getItem("DefaultLanguage"),
       listSel: 0,
+      imgcn1: require("../assets/imgs/list/01cn.png"),
+      imgtw1: require("../assets/imgs/list/01tw.png"),
       img1: require("../assets/imgs/list/01.png"),
+      imgkh1: require("../assets/imgs/list/01kh.png"),
+
+      imgcn2: require("../assets/imgs/list/02cn.png"),
+      imgtw2: require("../assets/imgs/list/02tw.png"),
       img2: require("../assets/imgs/list/02.png"),
+      imgkh2: require("../assets/imgs/list/02kh.png"),
+
+      imgcn3: require("../assets/imgs/list/03cn.png"),
+      imgtw3: require("../assets/imgs/list/03tw.png"),
       img3: require("../assets/imgs/list/03.png"),
+      imgkh3: require("../assets/imgs/list/03kh.png"),
+
+      imgcn4: require("../assets/imgs/list/04cn.png"),
+      imgtw4: require("../assets/imgs/list/04tw.png"),
       img4: require("../assets/imgs/list/04.png"),
+      imgkh4: require("../assets/imgs/list/04kh.png"),
+
+      imgcn5: require("../assets/imgs/list/05cn.png"),
+      imgtw5: require("../assets/imgs/list/05tw.png"),
       img5: require("../assets/imgs/list/05.png"),
+      imgkh5: require("../assets/imgs/list/05kh.png"),
+
+      imgcn6: require("../assets/imgs/list/06cn.png"),
+      imgtw6: require("../assets/imgs/list/06tw.png"),
       img6: require("../assets/imgs/list/06.png"),
+      imgkh6: require("../assets/imgs/list/06kh.png"),
+
+      imgcn7: require("../assets/imgs/list/07cn.png"),
+      imgtw7: require("../assets/imgs/list/07tw.png"),
       img7: require("../assets/imgs/list/07.png"),
+      imgkh7: require("../assets/imgs/list/07kh.png"),
+
+      imgcn8: require("../assets/imgs/list/08cn.png"),
+      imgtw8: require("../assets/imgs/list/08tw.png"),
       img8: require("../assets/imgs/list/08.png"),
+      imgkh8: require("../assets/imgs/list/08kh.png"),
+
+      imgcn9: require("../assets/imgs/list/09cn.png"),
+      imgtw9: require("../assets/imgs/list/09tw.png"),
       img9: require("../assets/imgs/list/09.png"),
+      imgkh9: require("../assets/imgs/list/09kh.png"),
+
+      imgcn10: require("../assets/imgs/list/10cn.png"),
+      imgtw10: require("../assets/imgs/list/10tw.png"),
       img10: require("../assets/imgs/list/10.png"),
+      imgkh10: require("../assets/imgs/list/10kh.png"),
+
+      imgcn11: require("../assets/imgs/list/11cn.png"),
+      imgtw11: require("../assets/imgs/list/11tw.png"),
+      img11: require("../assets/imgs/list/11.png"),
+      imgkh11: require("../assets/imgs/list/11.png"),
     };
   },
   created() {
     this.listSel = this.$route.query.listSel;
   },
   methods: {
+    imgUrl(page, lang) {
+      let img = "";
+      if (lang == "zh-CN") {
+        img =
+          page == 1
+            ? this.imgcn1
+            : page == 2
+            ? this.imgcn2
+            : page == 3
+            ? this.imgcn3
+            : page == 4
+            ? this.imgcn4
+            : page == 5
+            ? this.imgcn5
+            : page == 6
+            ? this.imgcn6
+            : page == 7
+            ? this.imgcn7
+            : page == 8
+            ? this.imgcn8
+            : page == 9
+            ? this.imgcn9
+            : page == 10
+            ? this.imgcn10
+            : this.imgcn11;
+      } else if (lang == "zh-TW") {
+        img =
+          page == 1
+            ? this.imgtw1
+            : page == 2
+            ? this.imgtw2
+            : page == 3
+            ? this.imgtw3
+            : page == 4
+            ? this.imgtw4
+            : page == 5
+            ? this.imgtw5
+            : page == 6
+            ? this.imgtw6
+            : page == 7
+            ? this.imgtw7
+            : page == 8
+            ? this.imgtw8
+            : page == 9
+            ? this.imgtw9
+            : page == 10
+            ? this.imgtw10
+            : this.imgtw11;
+      } else if (lang == "en-US") {
+        img =
+          page == 1
+            ? this.img1
+            : page == 2
+            ? this.img2
+            : page == 3
+            ? this.img3
+            : page == 4
+            ? this.img4
+            : page == 5
+            ? this.img5
+            : page == 6
+            ? this.img6
+            : page == 7
+            ? this.img7
+            : page == 8
+            ? this.img8
+            : page == 9
+            ? this.img9
+            : page == 10
+            ? this.img10
+            : this.img11;
+      } else if (lang == "en-KH") {
+        img =
+          page == 1
+            ? this.imgkh1
+            : page == 2
+            ? this.imgkh2
+            : page == 3
+            ? this.imgkh3
+            : page == 4
+            ? this.imgkh4
+            : page == 5
+            ? this.imgkh5
+            : page == 6
+            ? this.imgkh6
+            : page == 7
+            ? this.imgkh7
+            : page == 8
+            ? this.imgkh8
+            : page == 9
+            ? this.imgkh9
+            : page == 10
+            ? this.imgkh10
+            : this.imgkh11;
+      }
+
+      return img;
+    },
     langChange(value) {
       this.langType = value;
     },
@@ -611,6 +644,7 @@ export default {
 
 <style lang="scss" scoped>
 .news-page-container {
+  min-height: 100vh;
   position: relative;
   z-index: 0;
 
@@ -622,6 +656,9 @@ export default {
   }
 
   .list-page-second {
+    margin-top: 80px;
+    padding-bottom: 100px;
+
     .second-title {
       width: 90%;
       display: flex;
@@ -635,7 +672,7 @@ export default {
 
     .second-main {
       .details-every {
-        background-color: #fbf8fe;
+        background-color: #f2f3f5;
       }
     }
   }
@@ -657,8 +694,6 @@ export default {
   }
 
   .list-page-second {
-    margin-bottom: 20px;
-
     .second-title {
       margin: 50px auto;
       font-size: 30px;
@@ -694,8 +729,9 @@ export default {
           flex-direction: column;
           justify-content: center;
           font-size: 25px;
-          color: #5e5467;
+          color: #272729;
           text-align: left;
+          font-weight: 400;
         }
 
         .details-img {
@@ -728,8 +764,6 @@ export default {
   }
 
   .list-page-second {
-    margin-bottom: 20px;
-
     .second-title {
       margin: 50px auto;
       font-size: 30px;
@@ -765,8 +799,9 @@ export default {
           flex-direction: column;
           justify-content: center;
           font-size: 25px;
-          color: #5e5467;
+          color: #272729;
           text-align: left;
+          font-weight: 400;
         }
 
         .details-img {
@@ -799,8 +834,6 @@ export default {
   }
 
   .list-page-second {
-    margin-bottom: 20px;
-
     .second-title {
       margin: 50px auto;
       font-size: 30px;
@@ -837,8 +870,9 @@ export default {
           flex-direction: column;
           justify-content: center;
           font-size: 25px;
-          color: #5e5467;
+          color: #272729;
           text-align: left;
+          font-weight: 400;
         }
 
         .details-img {
@@ -871,8 +905,6 @@ export default {
   }
 
   .list-page-second {
-    margin-bottom: 20px;
-
     .second-title {
       margin: 50px auto;
       font-size: 30px;
@@ -909,8 +941,9 @@ export default {
           flex-direction: column;
           justify-content: center;
           font-size: 22px;
-          color: #5e5467;
+          color: #272729;
           text-align: left;
+          font-weight: 400;
         }
 
         .details-img {
@@ -946,8 +979,6 @@ export default {
   }
 
   .list-page-second {
-    margin-bottom: 20px;
-
     .second-title {
       margin: 50px auto;
       font-size: 30px;
@@ -984,8 +1015,9 @@ export default {
           flex-direction: column;
           justify-content: center;
           font-size: 20px;
-          color: #5e5467;
+          color: #272729;
           text-align: left;
+          font-weight: 400;
         }
 
         .details-img {
@@ -1022,6 +1054,8 @@ export default {
     }
 
     .list-page-second {
+      margin-top: 20px;
+
       .second-title {
         display: none;
         margin: 20px auto;
@@ -1073,8 +1107,9 @@ export default {
             flex-direction: column;
             justify-content: center;
             font-size: 14px;
-            color: #5e5467;
+            color: #272729;
             text-align: left;
+            font-weight: 400;
           }
 
           .details-img {
@@ -1083,7 +1118,8 @@ export default {
             justify-content: center;
 
             img {
-              width: 10px;
+              width: 20px;
+              height: 20px;
             }
           }
         }

@@ -8,32 +8,72 @@
       <img src="../assets/imgs/about/banner-pc.png" class="first-img" />
     </div>
     <div class="about-page-second">
-      <div class="second-title">
-        <div class="img-left">
-          <img src="../assets/imgs/home/left.png" />
+      <div class="about-page-third">
+        <div class="second-title">
+          <img
+            :src="
+              langType == 'zh-CN'
+                ? titleOne02
+                : langType == 'zh-TW'
+                ? titleOne03
+                : langType == 'en-US'
+                ? titleOne01
+                : titleOne01
+            "
+          />
         </div>
-        <span v-html="$t('localization.brandStoryFont')"></span>
-        <div class="img-right">
-          <img src="../assets/imgs/home/rigth.png" />
+        <div class="second-phone-title">
+          <img
+            :src="
+              langType == 'zh-CN'
+                ? titleOne02
+                : langType == 'zh-TW'
+                ? titleOne03
+                : langType == 'en-US'
+                ? titleOne01
+                : titleOne01
+            "
+          />
         </div>
+        <p class="second-font-one bottomNum">
+          {{ $t("localization.aboutUsConFont") }}
+        </p>
+
+        <p class="second-font-one bottomNum">
+          {{ $t("localization.aboutUsConSecondFont") }}
+        </p>
+        <p class="second-font-one">
+          {{ $t("localization.aboutUsConThirdFont") }}
+        </p>
       </div>
-      <div class="second-phone-title">
-        <span v-html="$t('localization.brandStoryFont')"></span>
-      </div>
-      <p class="second-font-one">{{ $t("localization.aboutUsConFont") }}</p>
     </div>
+
     <div class="about-page-third">
       <div class="second-title">
-        <div class="img-left">
-          <img src="../assets/imgs/home/left.png" />
-        </div>
-        <span v-html="$t('localization.brandShopFont')"></span>
-        <div class="img-right">
-          <img src="../assets/imgs/home/rigth.png" />
-        </div>
+        <img
+          :src="
+            langType == 'zh-CN'
+              ? titleTwo02
+              : langType == 'zh-TW'
+              ? titleTwo03
+              : langType == 'en-US'
+              ? titleTwo01
+              : titleTwo01
+          "
+        />
       </div>
       <div class="second-phone-title">
-        <span v-html="$t('localization.brandShopFont')"></span>
+        <img
+          :src="
+            langType == 'zh-CN'
+              ? titleTwo02
+              : langType == 'zh-TW'
+              ? titleTwo03
+              : langType == 'en-US'
+              ? titleTwo01
+              : titleTwo01
+          "
+        />
       </div>
       <div class="third-img">
         <div class="container">
@@ -73,18 +113,35 @@
       </div>
     </div>
     <div class="about-page-fourth">
-      <div class="second-title">
-        <div class="img-left">
-          <img src="../assets/imgs/home/left.png" />
+      <div class="about-page-third">
+        <div class="second-title">
+          <img
+            :src="
+              langType == 'zh-CN'
+                ? titleThree02
+                : langType == 'zh-TW'
+                ? titleThree03
+                : langType == 'en-US'
+                ? titleThree01
+                : titleThree01
+            "
+          />
         </div>
-        <span v-html="$t('localization.fourthTitleFont')"></span>
-        <div class="img-right">
-          <img src="../assets/imgs/home/rigth.png" />
+        <div class="second-phone-title">
+          <img
+            :src="
+              langType == 'zh-CN'
+                ? titleThree02
+                : langType == 'zh-TW'
+                ? titleThree03
+                : langType == 'en-US'
+                ? titleThree01
+                : titleThree01
+            "
+          />
         </div>
       </div>
-      <div class="second-phone-title">
-        <span v-html="$t('localization.fourthTitleFont')"></span>
-      </div>
+
       <div class="fourth-top">
         <div class="fourth-main">
           <div class="container">
@@ -145,6 +202,18 @@ export default {
       img: this.$store.state.baseUrl,
       langType: localStorage.getItem("DefaultLanguage"),
       teamList: [],
+
+      titleOne01: require("../assets/imgs/about/titleOne01.png"),
+      titleOne02: require("../assets/imgs/about/titleOne02.png"),
+      titleOne03: require("../assets/imgs/about/titleOne03.png"),
+
+      titleTwo01: require("../assets/imgs/about/titleTwo01.png"),
+      titleTwo02: require("../assets/imgs/about/titleTwo02.png"),
+      titleTwo03: require("../assets/imgs/about/titleTwo03.png"),
+
+      titleThree01: require("../assets/imgs/about/titleThree01.png"),
+      titleThree02: require("../assets/imgs/about/titleThree02.png"),
+      titleThree03: require("../assets/imgs/about/titleThree03.png"),
     };
   },
   created() {
@@ -243,13 +312,16 @@ export default {
 
 <style lang="scss" scoped>
 .second-title {
-  width: 90%;
+  width: 100%;
+  margin: 30px auto 15px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   color: #755793;
 
   img {
-    height: 18px;
+    width: 325px;
+    height: 98px;
+    object-fit: cover;
   }
 }
 
@@ -259,11 +331,12 @@ export default {
 
   .about-page-second {
     width: 100%;
-    background-color: #fff;
+
+    background: url("../assets/imgs/about/back.png") no-repeat;
 
     .second-font-one {
       margin: 0 auto;
-      color: #837a8b;
+      color: #272729;
       text-align: left;
     }
   }
@@ -464,26 +537,16 @@ export default {
     }
   }
 
-  .second-title {
-    margin: 50px auto;
-    font-size: 30px;
-    letter-spacing: 3;
-
-    .img-left {
-      margin-right: 30px;
-    }
-
-    .img-right {
-      margin-left: 30px;
-    }
-  }
-
   .about-page-second {
+    padding-bottom: 45px;
     .second-font-one {
-      width: 55%;
+      // width: 85%;
       font-size: 20px;
-      line-height: 36px;
-      letter-spacing: 1px;
+      line-height: 34px;
+    }
+
+    .bottomNum {
+      margin-bottom: 30px !important;
     }
   }
 
@@ -606,26 +669,16 @@ export default {
     }
   }
 
-  .second-title {
-    margin: 50px auto;
-    font-size: 30px;
-    letter-spacing: 3;
-
-    .img-left {
-      margin-right: 30px;
-    }
-
-    .img-right {
-      margin-left: 30px;
-    }
-  }
-
   .about-page-second {
+    padding-bottom: 45px;
     .second-font-one {
-      width: 60%;
+      // width: 85%;
       font-size: 20px;
-      line-height: 36px;
-      letter-spacing: 1px;
+      line-height: 34px;
+    }
+
+    .bottomNum {
+      margin-bottom: 30px !important;
     }
   }
 
@@ -823,26 +876,16 @@ export default {
     }
   }
 
-  .second-title {
-    margin: 50px auto;
-    font-size: 30px;
-    letter-spacing: 3;
-
-    .img-left {
-      margin-right: 30px;
-    }
-
-    .img-right {
-      margin-left: 30px;
-    }
-  }
-
   .about-page-second {
+    padding-bottom: 45px;
     .second-font-one {
-      width: 65%;
+      // width: 90%;
       font-size: 20px;
-      line-height: 36px;
-      letter-spacing: 1px;
+      line-height: 34px;
+    }
+
+    .bottomNum {
+      margin-bottom: 30px !important;
     }
   }
 
@@ -1043,26 +1086,16 @@ export default {
     }
   }
 
-  .second-title {
-    margin: 50px auto;
-    font-size: 30px;
-    letter-spacing: 3;
-
-    .img-left {
-      margin-right: 30px;
-    }
-
-    .img-right {
-      margin-left: 30px;
-    }
-  }
-
   .about-page-second {
+    padding-bottom: 45px;
     .second-font-one {
-      width: 80%;
+      // width: 95%;
       font-size: 20px;
-      line-height: 36px;
-      letter-spacing: 1px;
+      line-height: 34px;
+    }
+
+    .bottomNum {
+      margin-bottom: 20px !important;
     }
   }
 
@@ -1268,26 +1301,16 @@ export default {
     padding-top: 60px;
   }
 
-  .second-title {
-    margin: 50px auto;
-    font-size: 30px;
-    letter-spacing: 3;
-
-    .img-left {
-      margin-right: 30px;
-    }
-
-    .img-right {
-      margin-left: 30px;
-    }
-  }
-
   .about-page-second {
+    padding-bottom: 25px;
     .second-font-one {
-      width: 80%;
+      width: 100%;
       font-size: 18px;
-      line-height: 36px;
-      letter-spacing: 1px;
+      line-height: 32px;
+    }
+
+    .bottomNum {
+      margin-bottom: 20px !important;
     }
   }
 
@@ -1496,41 +1519,31 @@ export default {
 
   .second-title {
     display: none;
-    margin: 20px auto;
-    font-size: 18px;
-    letter-spacing: 3;
-
-    .img-left {
-      margin-right: 10px;
-    }
-
-    .img-right {
-      margin-left: 10px;
-    }
-
-    img {
-      height: 12px;
-    }
   }
 
   .second-phone-title {
     display: block;
-    width: 100%;
-    height: 32px;
-    margin: 25px auto;
-    line-height: 32px;
-    color: #fff;
-    background-color: #755793;
-    font-size: 16px;
+    margin: 20px auto 0;
+    text-align: left;
+
+    img {
+      width: 325px;
+      height: 97px;
+      object-fit: cover;
+    }
   }
 
   .about-page-second {
+    padding-bottom: 10px;
     .second-font-one {
       width: 100%;
       padding: 0 10px;
       font-size: 14px;
       line-height: 20px;
-      letter-spacing: 1px;
+    }
+
+    .bottomNum {
+      margin-bottom: 10px !important;
     }
   }
 

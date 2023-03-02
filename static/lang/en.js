@@ -17,16 +17,21 @@ module.exports = {
     bannerOneEn: '',
     addrFont: 'Addr',
     addrDetailsFont: "Great Disciple Sar Bith St, Phnom Penh, Cambodia(near the back entrance of Aeon Mall)",
+    addrDetailsLonDonFont: "56 Maida Vale London W9 1PP",
+    addrDetailsHongKongFont: "Flat 7A,68 Kimberley Road,Tsim Sha Tsui Hong Kong",
+    addrDetailsPHFont: "Borey Peng Huoth Beoung Snor",
+
     telFont: 'Tel',
     emailFont: 'Email',
     copyrightFont: 'Copyright &copy Monet beauty clinic All Rights Reserved',
-    brandStoryFont: 'Brand Story',
+    brandStoryFont: 'About Us',
     brandStoryOneFont: 'With the latest medical techniques and advanced equipment, Monet Beauty Clinic provides you professional, fashion and safest cosmetic treatments. “Help every client achieve their beauty dreams safely” is our founding mission!',
     brandStoryTwoFont: 'Holding the philosophy of “natural, safety and beauty”, Monet Beauty Clinic is a chain cosmetic clinic that consists dozens specialized cosmetic centers: Plastic Surgery Center, Skin Care Center, Micro Plastic Surgery Center, Anti-aging Center, Health Management Center, etc.',
     brandStoryDetailsFont: 'Details',
     aboutUsFont: 'About Us',
-    aboutUsConFont: 'Monet Beauty Clinic has best experts from China, Japan and Korea who are excellent in whitening, anti-aging and hair restore. Take medical skin care, face management and thread lift as main services, Monet Beauty Clinic provide you professional skin care, injection, facial rejuvenation, science slimming, hair restore & management and overseas medical treatment.',
-    OurServicesFont: 'Services Available',
+    aboutUsConFont: "Monet Beauty Clinic is largest and top class with most luxury skincare experiece in London, using latest FDA Approved technology for face, body &Skin.  Originated from dermatology expertise and research, headquartered in Hongkong since 2010.  Monet Beauty is focused on top-quality services and our experienced & esteemed doctors team is made internationally, including China, Japan, Korea and the UK.   We are professional to provide Asian-style aesthetic treatments.",
+    aboutUsConSecondFont: "Monet Beauty combines the most advanced non-surgical treatments from the US , Europe, Korea and Japan.  We aim to provide bespoke treatment plans to you as our valued customer and tailor to your needs.   We are excellent in skin management, including whitening, anti-ageing and Skin Rejuvenation.   Besides we are also brilliant in fat reduction, facial injectables, thread lifts and Hair transplant etc treatments. ",
+    aboutUsConThirdFont: "As of today, Monet Beauty has served over 15,000 clients from all around the world, establishing  trust and an excellent reputation among them.",
     raiseHairFeatureFont: 'Feature：A cosmetic is a substance or product used to enhance or alter the appearance of the face or the scent and texture of the body.Many cosmetics are designed to be applied to the face, hair and body...',
     moreFont: 'MORE',
     brandShopFont: 'Brand Stories',
@@ -38,6 +43,11 @@ module.exports = {
     shareFont: 'Metamorphosis Sharing',
     newsInfoFont: 'Medical Beauty Information',
     timeFont: 'Update Time: ',
+
+    jinBianFont: 'Phnom Penh Branch',
+    lonDonFont: 'London Branch',
+    jinBianPHFont: 'Phnom Penh PH Branch',
+    hongKongFont: 'Hong Kong Branch',
 
     consultFont: 'Consultation',
     nameFont: 'Name',
@@ -53,20 +63,20 @@ module.exports = {
     // Rejuvenation & Thread Lift
     fightDeclineAscensionFont: 'Anti-aging & Facelift',
     fightDeclineAscensionFont01: 'Anti-aging & Facelift',
-    fightOneFont: 'Fotona 4D Pro Laser Rhytidectomy',
+    fightOneFont: 'Fotona 4D Pro Laser',
     fightTwoFont: 'Ultherapy SMAS-Facelift',
     fightTenFont: 'ENDYMED 3Deep radiofrequency tightening & lift',
-    fightThreeFont: 'German Ella Thread Lift & Fat Reposition',
+    fightThreeFont: 'Variety American Threadlift',
     fightFourFont: 'AXXZIA Stem Cell Needle Free Mesotherapy',
     fightFiveFont: 'Germany SEYO Non-invasive Robot ',
     fightSixFont: 'FILLMED Facial Anti-ageing Care',
     fightSevenFont: 'LA MER Facial Restoration & Lift',
     fightEightFont: 'LA MER Anti-aging Care',
     fightNineFont: 'Thermage FLX Skin Tightening',
-    fightElevenFont: 'BTL Ultra360 collagen guns', // ff
+    fightElevenFont: 'BTL Ultra360', // ff
 
-    whiteningBeautyCreamFont: 'Whitening & Pigment Removal',
-    whiteningBeautyCreamFont01: 'Whitening & Pigment Removal',
+    whiteningBeautyCreamFont: 'Whitening & Repairing Pigmentation',
+    whiteningBeautyCreamFont01: 'Whitening & Repairing Pigmentation',
     whiteningOneFont: 'Picoway Facial Freckle Removal',
     whiteningTwoFont: 'Picoway Body Whitening',
     whiteningThreeFont: 'Japan AGLEX Phototherapy', // 日本AGLEX嫩肤美白舱
@@ -80,14 +90,12 @@ module.exports = {
     cleanOneFont: 'Hydrafacial Cleansing & Moisturizing',
     cleanTwoFont: 'LA MER Facial Cleansing & Moisturizing',
     cleanThreeFont: 'VALMONT Facial Moisturizing & Care',
-    cleanFourFont: 'FILORGA Anti-Aging Mesotherapy',
     cleanFiveFont: 'FILLMED Facial Moisturizing & Care',
 
     shrinkPoresFont: 'Pore Refining',
     shrinkPoresFont01: 'Pore Refining',
     shrinkOneFont: 'Picoway Laser Pore Refining',
     shrinkTwoFont: 'Israel ENDYMED RF Microneedling',
-    shrinkFourFont: 'Alma Photorejuvenation',
 
     raiseHairFont: 'Hair Care',
     raiseHairFont01: 'Hair Care',
@@ -106,7 +114,6 @@ module.exports = {
     privateRaiseFont01: 'Intimate Care',
     privateOneFont: 'Fotona Smooth Privacy Robot',
     privateTwoFont: 'Picoway Vaginal Beautification',
-    privateThreeFont: 'Vaginal Threads',
     privateFourFont: 'Uterus Warm Therapy',
 
     injectionFont: 'Injectables',
@@ -129,12 +136,18 @@ module.exports = {
     otherEightFont: 'LA MER Anti-aging Eye Care',
 
     membersOnlyFont: 'Member Exclusive',
-    membersOnlyFont01: 'Member Exclusive',
     membersFont: 'Open to members only',
     membersOneFont: 'Japanese Miss eye dor eyelash grafting',
     membersTwoFont: 'Japanese mao gel Manicure',
     membersThreeFont: 'VALMONT body oil massage',
     membersFourFont: 'MTG Scalp Health Management',
+
+    skinProblemFont: 'Skin Problem Repair',
+    skinProblemOneFont: 'LDM-MED',
+    skinProblemTwoFont: 'LUTRONIC Healite IIC',
+    skinProblemThreeFont: 'Lumenis M22 AOPT ',
+
+    faceAndBodyFont: "Face And Body Reshaping",
 
     brandListFont: 'Brand List',
     brandFont01: 'LA MER',
@@ -155,6 +168,10 @@ module.exports = {
     brandFont16: 'RESTYLANE',
     brandFont17: 'thermage',
     brandFont18: 'ENDYMED',
+    brandFont19: 'LDM-MED',
+    brandFont20: 'Lutronic',
+    brandFont21: 'BTL',
+    brandFont22: 'Lumenis',
 
     checkFont: 'Search',
     placeFont: 'Please enter keyword search',

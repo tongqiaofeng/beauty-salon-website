@@ -60,6 +60,8 @@
                 ? $t("localization.otherFont")
                 : projectSel == 10
                 ? $t("localization.membersOnlyFont")
+                : projectSel == 11
+                ? $t("localization.skinProblemFont")
                 : ""
             }}</span
           >
@@ -86,7 +88,7 @@
         </div>
       </div>
     </div>
-    <div>
+    <div style="position: absolute;bottom: 0;left: 0;right: 0;">
       <footerPage></footerPage>
     </div>
   </div>
@@ -132,21 +134,6 @@ export default {
     });
   },
   methods: {
-    checkShareDetails(id) {
-      this.$axios
-        .post(this.img + "/articleInfo", {
-          id: id,
-        })
-        .then((res) => {
-          console.log("新闻详情");
-          console.log(res);
-          this.details = res.data;
-          this.backTop();
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    },
     goList() {
       this.$router.push({
         path: "/list",
@@ -264,15 +251,17 @@ export default {
 
 <style lang="scss" scoped>
 .share-page-container {
+  min-height: 100vh;
   position: relative;
   z-index: 0;
 
   .header-page {
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
+    background-color: #fff;
   }
 
   .share-page-details {
@@ -284,6 +273,7 @@ export default {
       background-color: #fbf8fe;
       text-align: left;
       color: #2d2d2d;
+      overflow: hidden;
     }
 
     .details-main {
@@ -471,11 +461,11 @@ export default {
 @media screen and (max-width: 767px) {
   .share-page-details {
     padding-top: 80px;
-    padding-bottom: 40px;
+    padding-bottom: 100px;
 
     .details-top {
       height: 50px;
-      padding-left: 10%;
+      padding-left: 10px;
       line-height: 53px;
       font-size: 16px;
     }

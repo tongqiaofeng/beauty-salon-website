@@ -7,75 +7,207 @@
       <img src="../assets/imgs/contact/top.png" class="first-img" />
       <img src="../assets/imgs/contact/pc-top.png" class="pc-banner-img" />
     </div>
-    <div class="second-title">
-      <div class="img-left">
-        <img src="../assets/imgs/home/left.png" />
-      </div>
-      <span v-html="$t('localization.contactType')"></span>
-      <div class="img-right">
-        <img src="../assets/imgs/home/rigth.png" />
-      </div>
-    </div>
-    <div class="second-phone-title">
-      <span v-html="$t('localization.contactType')"></span>
-    </div>
     <div class="contact-main">
-      <div class="main-left">
-        <div>
-          <div style="display: flex;justify-content: space-between;">
-            <div class="main-left-tel">
-              <img src="../assets/imgs/contact/tele.png" class="con-icon01" />
-              <p @click="callPhone" style="font-weight: bold;">+855 15220000</p>
-            </div>
-            <div class="main-left-email left-email">
-              <img src="../assets/imgs/contact/email.png" class="con-icon02" />
-              <p
-                class="tag-read"
-                style="cursor: pointer;"
-                :data-clipboard-text="emailNumber"
-                @click="copyBankAccount"
-              >
-                contact@monetbeauty.com
-              </p>
-            </div>
-          </div>
+      <div class="second-title">
+        <img
+          :src="
+            langType == 'zh-CN'
+              ? brand03
+              : langType == 'zh-TW'
+              ? brand02
+              : langType == 'en-US'
+              ? brand01
+              : brand01
+          "
+        />
+      </div>
+      <div class="second-phone-title">
+        <img
+          :src="
+            langType == 'zh-CN'
+              ? brand03
+              : langType == 'zh-TW'
+              ? brand02
+              : langType == 'en-US'
+              ? brand01
+              : brand01
+          "
+        />
+      </div>
 
-          <div class="main-left-email">
-            <img src="../assets/imgs/contact/addr.png" class="con-icon03" />
-            <p>{{ $t("localization.addrDetailsFont") }}</p>
+      <div class="main-company-every">
+        <div class="every-img marginRight" @click="checkStore(1)">
+          <img src="../assets/imgs/contact/shop02.png" alt="" />
+        </div>
+        <div class="every-font">
+          <div class="font-main">
+            <div class="font-title" @click="checkStore(1)">
+              {{ $t("localization.lonDonFont") }}
+            </div>
+            <div class="font-detail" @click="checkStore(1)">
+              {{ $t("localization.addrDetailsLonDonFont") }}
+            </div>
+            <div class="font-contact">
+              <div class="contact-phone">
+                <img src="../assets/imgs/contact/tele.png" class="con-icon01" />
+                <p @click="callPhone">+855 15220000</p>
+              </div>
+              <div class="contact-email">
+                <img
+                  src="../assets/imgs/contact/email.png"
+                  class="con-icon02"
+                />
+                <p
+                  class="tag-read"
+                  style="cursor: pointer"
+                  :data-clipboard-text="emailNumber"
+                  @click="copyBankAccount"
+                >
+                  contact@monetbeauty.com
+                </p>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="main-company-every">
+        <div class="every-font">
+          <div class="font-main">
+            <div class="font-title" @click="checkStore(2)">
+              {{ $t("localization.hongKongFont") }}
+            </div>
+            <div class="font-detail" @click="checkStore(2)">
+              {{ $t("localization.addrDetailsHongKongFont") }}
+            </div>
+            <div class="font-contact">
+              <div class="contact-phone">
+                <img src="../assets/imgs/contact/tele.png" class="con-icon01" />
+                <p @click="callPhone">+855 15220000</p>
+              </div>
+              <div class="contact-email">
+                <img
+                  src="../assets/imgs/contact/email.png"
+                  class="con-icon02"
+                />
+                <p
+                  class="tag-read"
+                  style="cursor: pointer"
+                  :data-clipboard-text="emailNumber"
+                  @click="copyBankAccount"
+                >
+                  contact@monetbeauty.com
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="every-img marginLeft" @click="checkStore(2)">
+          <img src="../assets/imgs/contact/shop04.png" alt="" />
+        </div>
+      </div>
+      <div class="main-company-every">
+        <div class="every-img marginRight" @click="checkStore(3)">
+          <img src="../assets/imgs/contact/shop01.png" alt="" />
+        </div>
+        <div class="every-font">
+          <div class="font-main">
+            <div class="font-title" @click="checkStore(3)">
+              {{ $t("localization.jinBianFont") }}
+            </div>
+            <div class="font-detail" @click="checkStore(3)">
+              {{ $t("localization.addrDetailsFont") }}
+            </div>
+            <div class="font-contact">
+              <div class="contact-phone">
+                <img src="../assets/imgs/contact/tele.png" class="con-icon01" />
+                <p @click="callPhone">+855 15220000</p>
+              </div>
+              <div class="contact-email">
+                <img
+                  src="../assets/imgs/contact/email.png"
+                  class="con-icon02"
+                />
+                <p
+                  class="tag-read"
+                  style="cursor: pointer"
+                  :data-clipboard-text="emailNumber"
+                  @click="copyBankAccount"
+                >
+                  contact@monetbeauty.com
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-company-every">
+        <div class="every-font">
+          <div class="font-main">
+            <div class="font-title" @click="checkStore(4)">
+              {{ $t("localization.jinBianPHFont") }}
+            </div>
+            <div class="font-detail" @click="checkStore(4)">
+              {{ $t("localization.addrDetailsPHFont") }}
+            </div>
+            <div class="font-contact">
+              <div class="contact-phone">
+                <img src="../assets/imgs/contact/tele.png" class="con-icon01" />
+                <p @click="callPhone">+855 15220000</p>
+              </div>
+              <div class="contact-email">
+                <img
+                  src="../assets/imgs/contact/email.png"
+                  class="con-icon02"
+                />
+                <p
+                  class="tag-read"
+                  style="cursor: pointer"
+                  :data-clipboard-text="emailNumber"
+                  @click="copyBankAccount"
+                >
+                  contact@monetbeauty.com
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="every-img marginLeft" @click="checkStore(4)">
+          <img src="../assets/imgs/contact/shop03.png" alt="" />
+        </div>
+      </div>
 
+      <!-- <div class="main-left">
         <div class="main-left-map">
           <a
             href="https://www.google.com/maps/dir/?api=1&language=zh-CN&origin=&destination=11.548813,104.935900"
             target="_blank"
             ><img
               src="../assets/imgs/contact/conMap.png"
-              style="width: 100%;height: 100%;"
+              style="width: 100%; height: 100%"
           /></a>
         </div>
-      </div>
+      </div> -->
       <div class="main-right">
         <p class="right-top">{{ $t("localization.consultFont") }}</p>
         <div class="right-name">
           <p>
-            <span style="color: red;">* </span>{{ $t("localization.nameFont") }}
+            <span style="color: red">* </span>{{ $t("localization.nameFont") }}
           </p>
-          <input
+          <el-input
             class="input-style"
-            style="padding-left: 15px;"
             type="text"
             v-model="name"
             @input="nameInput"
-          />
-          <p style="color: red;" v-show="nameNum == 1">
+          >
+          </el-input>
+
+          <p style="color: red" v-show="nameNum == 1">
             {{ $t("localization.nameSureFont") }}
           </p>
         </div>
         <div class="right-tel">
           <p>
-            <span style="color: red;">* </span
+            <span style="color: red">* </span
             >{{ $t("localization.telephoneFont") }}
           </p>
           <el-input
@@ -93,7 +225,13 @@
               >
                 <img
                   :src="item.img"
-                  style="width: 17px;height: 12px;float: left;margin-top: 11px;margin-right: 3px;"
+                  style="
+                    width: 17px;
+                    height: 12px;
+                    float: left;
+                    margin-top: 11px;
+                    margin-right: 3px;
+                  "
                 />
                 <span style="float: left">{{ item.label }}</span>
                 <span style="float: right; color: #8492a6; font-size: 13px">{{
@@ -102,26 +240,26 @@
               </el-option>
             </el-select>
           </el-input>
-          <p style="color: red;" v-show="phoneNum == 1">
+          <p style="color: red" v-show="phoneNum == 1">
             {{ $t("localization.phoneSureFont") }}
           </p>
         </div>
         <div class="right-tel">
           <p>
-            <span style="color: red;">* </span
+            <span style="color: red">* </span
             >{{ $t("localization.consultContainerFont") }}
           </p>
           <textarea
             class="area-type"
-            style="padding-left: 15px;"
+            style="padding-left: 15px"
             v-model="content"
             @input="contentInput"
           ></textarea>
-          <p style="color: red;" v-show="contentNum == 1">
+          <p style="color: red" v-show="contentNum == 1">
             {{ $t("localization.contentSureFont") }}
           </p>
         </div>
-        <div style="width: 100%;text-align: right;">
+        <div style="width: 100%; text-align: right">
           <div class="submit-button" @click="submitContent" v-preventClick>
             SUBMIT
           </div>
@@ -173,13 +311,31 @@ export default {
           value: "+855",
           img: require("../assets/imgs/home/jian.png"),
         },
+        {
+          label: "Britain",
+          value: "+44",
+          img: require("../assets/imgs/home/en.png"),
+        },
       ],
       nameNum: 0,
       phoneNum: 0,
       contentNum: 0,
+
+      brand01: require("../assets/imgs/contact/title.png"),
+      brand02: require("../assets/imgs/contact/title02.png"),
+      brand03: require("../assets/imgs/contact/title03.png"),
     };
   },
   methods: {
+    // 跳转店内详情
+    checkStore(val) {
+      this.$router.push({
+        path: "/store",
+        query: {
+          storeSel: val,
+        },
+      });
+    },
     // 调用拨号功能
     callPhone() {
       window.location.href = "tel:" + this.phone;
@@ -288,13 +444,16 @@ export default {
 
 <style lang="scss" scoped>
 .second-title {
-  width: 90%;
+  width: 100%;
+  margin: 30px auto 15px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   color: #755793;
 
   img {
-    height: 18px;
+    width: 325px;
+    height: 98px;
+    object-fit: cover;
   }
 }
 
@@ -305,35 +464,65 @@ export default {
   .contact-main {
     background-color: #fff;
 
-    .main-left {
-      text-align: left;
+    .main-company-every {
+      margin-bottom: 34px;
       display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
+      justify-content: center;
+      align-items: center;
 
-      .main-left-title {
-        color: #837a8b;
+      .every-img {
+        cursor: pointer;
       }
 
-      .main-left-tel,
-      .main-left-email {
-        display: flex;
-        color: #837a8b;
+      .every-font {
+        text-align: left;
+
+        .font-title {
+          color: #863e89;
+          cursor: pointer;
+        }
+
+        .font-detail {
+          color: #616366;
+          cursor: pointer;
+        }
       }
 
-      .main-left-map {
-        img {
-          object-fit: cover;
+      .font-contact {
+        .contact-phone {
+          display: flex;
+          align-items: center;
+          color: #863e89;
+
+          .con-icon01 {
+            width: 12px;
+            height: 12px;
+            margin-right: 6px;
+          }
+        }
+
+        .contact-email {
+          display: flex;
+          align-items: center;
+
+          .con-icon02 {
+            width: 12px;
+            height: 12px;
+            margin-right: 6px;
+          }
+
+          .tag-read {
+            color: #85888c;
+          }
         }
       }
     }
 
     .main-right {
-      background-color: #fbf8fe;
-
       .right-top {
-        color: #755793;
+        color: #863e89;
         font-weight: bold;
+        text-align: center;
       }
 
       .right-name,
@@ -341,8 +530,8 @@ export default {
         text-align: left;
 
         p {
-          font-size: 14px;
-          color: #959596;
+          font-size: 15px;
+          color: #000;
         }
       }
 
@@ -356,7 +545,7 @@ export default {
 
       .submit-button {
         font-size: 14px;
-        background-color: #755793;
+        background-color: #863e89;
         text-align: center;
         color: #fff;
         // float: right;
@@ -401,63 +590,70 @@ export default {
     object-fit: cover;
   }
 
-  .second-title {
-    margin: 50px auto;
-    font-size: 30px;
-    letter-spacing: 3;
-
-    .img-left {
-      margin-right: 30px;
-    }
-
-    .img-right {
-      margin-left: 30px;
-    }
-  }
-
   .contact-main {
-    display: flex;
-    justify-content: space-between;
+    // width: 85%;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 80px;
 
-    .main-left {
-      margin: 0 0 50px 220px;
+    .every-img {
+      cursor: pointer;
+      img {
+        width: 610px;
+        height: 401px;
+      }
+    }
 
-      .main-left-title {
-        font-size: 32px;
-        font-weight: bold;
+    .every-font {
+      .font-title {
+        font-size: 26px;
       }
 
-      .main-left-tel,
-      .left-email {
-        margin-bottom: 20px;
+      .font-detail {
+        font-size: 18px;
+      }
+    }
+
+    .font-contact {
+      .contact-phone {
+        font-size: 16px;
       }
 
-      .main-left-tel,
-      .main-left-email {
-        p {
-          margin-left: 24px;
-          font-size: 18px;
+      .contact-email {
+        .tag-read {
+          font-size: 16px;
         }
       }
+    }
 
-      .left-email {
-        padding-right: 40%;
+    .every-font {
+      width: 410px;
+
+      .font-main {
+        width: 300px;
+        margin: 0 auto;
+
+        .font-detail {
+          margin-top: 15px;
+          line-height: 24px;
+        }
       }
+    }
 
-      .main-left-map {
-        width: 70%;
-        height: 410px;
-        margin-top: 50px;
+    .font-contact {
+      margin-top: 21px;
+
+      .contact-email {
+        margin-top: 9px;
       }
     }
 
     .main-right {
-      width: 600px;
-      margin: 0 220px 50px 0;
-      padding: 0 50px 40px;
+      width: 65%;
+      margin: 0 auto;
+      padding: 16px 50px 30px;
 
       .right-top {
-        margin-top: 40px;
         font-size: 30px;
       }
 
@@ -514,65 +710,70 @@ export default {
     object-fit: cover;
   }
 
-  .second-title {
-    margin: 50px auto;
-    font-size: 30px;
-    letter-spacing: 3;
-
-    .img-left {
-      margin-right: 30px;
-    }
-
-    .img-right {
-      margin-left: 30px;
-    }
-  }
-
   .contact-main {
-    width: 85%;
+    // width: 85%;
+    width: fit-content;
     margin: 0 auto;
-    padding-bottom: 40px;
-    display: flex;
-    justify-content: space-between;
+    margin-top: 80px;
 
-    .main-left {
-      width: 45%;
+    .every-img {
+      cursor: pointer;
+      img {
+        width: 610px;
+        height: 401px;
+      }
+    }
 
-      .main-left-title {
-        font-size: 32px;
-        font-weight: bold;
+    .every-font {
+      .font-title {
+        font-size: 26px;
       }
 
-      .main-left-tel,
-      .main-left-email {
-        p {
-          margin-left: 24px;
-          font-size: 18px;
+      .font-detail {
+        font-size: 18px;
+      }
+    }
+
+    .font-contact {
+      .contact-phone {
+        font-size: 16px;
+      }
+
+      .contact-email {
+        .tag-read {
+          font-size: 16px;
         }
       }
+    }
 
-      .main-left-tel,
-      .left-email {
-        margin-bottom: 20px;
+    .every-font {
+      width: 410px;
+
+      .font-main {
+        width: 300px;
+        margin: 0 auto;
+
+        .font-detail {
+          margin-top: 15px;
+          line-height: 24px;
+        }
       }
+    }
 
-      .left-email {
-        padding-right: 0;
-      }
+    .font-contact {
+      margin-top: 21px;
 
-      .main-left-map {
-        width: 70%;
-        height: 410px;
-        margin-top: 50px;
+      .contact-email {
+        margin-top: 9px;
       }
     }
 
     .main-right {
-      width: 45%;
-      padding: 0 50px 30px;
+      width: 65%;
+      margin: 0 auto;
+      padding: 16px 50px 30px;
 
       .right-top {
-        margin-top: 40px;
         font-size: 30px;
       }
 
@@ -629,65 +830,70 @@ export default {
     object-fit: cover;
   }
 
-  .second-title {
-    margin: 50px auto;
-    font-size: 30px;
-    letter-spacing: 3;
-
-    .img-left {
-      margin-right: 30px;
-    }
-
-    .img-right {
-      margin-left: 30px;
-    }
-  }
-
   .contact-main {
-    width: 85%;
+    // width: 85%;
+    width: fit-content;
     margin: 0 auto;
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: space-between;
+    margin-top: 80px;
 
-    .main-left {
-      width: 49%;
+    .every-img {
+      cursor: pointer;
+      img {
+        width: 610px;
+        height: 401px;
+      }
+    }
 
-      .main-left-title {
-        font-size: 32px;
-        font-weight: bold;
+    .every-font {
+      .font-title {
+        font-size: 26px;
       }
 
-      .main-left-tel,
-      .main-left-email {
-        p {
-          margin-left: 24px;
-          font-size: 18px;
+      .font-detail {
+        font-size: 18px;
+      }
+    }
+
+    .font-contact {
+      .contact-phone {
+        font-size: 16px;
+      }
+
+      .contact-email {
+        .tag-read {
+          font-size: 16px;
         }
       }
+    }
 
-      .main-left-tel,
-      .left-email {
-        margin-bottom: 20px;
+    .every-font {
+      width: 410px;
+
+      .font-main {
+        width: 300px;
+        margin: 0 auto;
+
+        .font-detail {
+          margin-top: 15px;
+          line-height: 24px;
+        }
       }
+    }
 
-      .left-email {
-        padding-right: 0;
-      }
+    .font-contact {
+      margin-top: 21px;
 
-      .main-left-map {
-        width: 70%;
-        height: 410px;
-        margin-top: 50px;
+      .contact-email {
+        margin-top: 9px;
       }
     }
 
     .main-right {
-      width: 45%;
-      padding: 0 50px 30px;
+      width: 65%;
+      margin: 0 auto;
+      padding: 16px 50px 30px;
 
       .right-top {
-        margin-top: 40px;
         font-size: 30px;
       }
 
@@ -744,65 +950,70 @@ export default {
     object-fit: cover;
   }
 
-  .second-title {
-    margin: 50px auto;
-    font-size: 30px;
-    letter-spacing: 3;
-
-    .img-left {
-      margin-right: 30px;
-    }
-
-    .img-right {
-      margin-left: 30px;
-    }
-  }
-
   .contact-main {
-    width: 90%;
+    // width: 85%;
+    width: fit-content;
     margin: 0 auto;
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: space-between;
+    margin-top: 60px;
 
-    .main-left {
-      width: 49%;
+    .every-img {
+      cursor: pointer;
+      img {
+        width: 410px;
+        height: 251px;
+      }
+    }
 
-      .main-left-title {
-        font-size: 32px;
-        font-weight: bold;
+    .every-font {
+      .font-title {
+        font-size: 26px;
       }
 
-      .main-left-tel,
-      .main-left-email {
-        p {
-          margin-left: 24px;
-          font-size: 18px;
+      .font-detail {
+        font-size: 18px;
+      }
+    }
+
+    .font-contact {
+      .contact-phone {
+        font-size: 16px;
+      }
+
+      .contact-email {
+        .tag-read {
+          font-size: 16px;
         }
       }
+    }
 
-      .main-left-tel,
-      .left-email {
-        margin-bottom: 20px;
+    .every-font {
+      width: 410px;
+
+      .font-main {
+        width: 300px;
+        margin: 0 auto;
+
+        .font-detail {
+          margin-top: 15px;
+          line-height: 24px;
+        }
       }
+    }
 
-      .left-email {
-        padding-right: 0;
-      }
+    .font-contact {
+      margin-top: 21px;
 
-      .main-left-map {
-        width: 70%;
-        height: 310px;
-        margin-top: 50px;
+      .contact-email {
+        margin-top: 9px;
       }
     }
 
     .main-right {
-      width: 49%;
-      padding: 0 30px 30px;
+      width: 65%;
+      margin: 0 auto;
+      padding: 16px 50px 30px;
 
       .right-top {
-        margin-top: 40px;
         font-size: 30px;
       }
 
@@ -864,65 +1075,72 @@ export default {
     padding-top: 60px;
   }
 
-  .second-title {
-    margin: 50px auto;
-    font-size: 30px;
-    letter-spacing: 3;
-
-    .img-left {
-      margin-right: 30px;
-    }
-
-    .img-right {
-      margin-left: 30px;
-    }
-  }
-
   .contact-main {
-    padding: 0 20px 30px 20px;
-    display: flex;
-    justify-content: space-between;
+    width: fit-content;
+    padding: 0 20px 0 20px;
+    margin: 0 auto;
+    margin-top: 40px;
 
-    .main-left {
-      width: 46%;
-      margin: 0 auto;
+    .main-company-every {
+      padding: 0 15px;
 
-      .main-left-title {
-        font-size: 25px;
-        font-weight: bold;
-      }
-
-      .main-left-tel,
-      .main-left-email {
-        p {
-          margin-left: 10px;
-          font-size: 16px;
+      .every-img {
+        cursor: pointer;
+        img {
+          width: 252px;
+          height: 162px;
         }
       }
 
-      .main-left-tel,
-      .left-email {
-        margin-bottom: 20px;
+      .every-font {
+        .font-title {
+          font-size: 24px;
+        }
+
+        .font-detail {
+          font-size: 10px;
+        }
       }
 
-      .left-email {
-        padding-right: 0;
+      .font-contact {
+        .contact-phone {
+          font-size: 10px;
+        }
+
+        .contact-email {
+          .tag-read {
+            font-size: 10px;
+          }
+        }
       }
 
-      .main-left-map {
-        width: 90%;
-        height: 310px;
-        margin-top: 50px;
+      .every-font {
+        width: 300px;
+        .font-main {
+          width: 250px;
+          margin: 0 auto;
+
+          .font-detail {
+            margin-top: 8px;
+            line-height: 16px;
+          }
+        }
+      }
+
+      .font-contact {
+        margin-top: 10px;
+
+        .contact-email {
+          margin-top: 5px;
+        }
       }
     }
-
     .main-right {
-      width: 54%;
-      margin-left: 10px;
-      padding: 0 30px 30px;
+      width: 80%;
+      margin: 0 auto;
+      padding: 16px 30px 30px;
 
       .right-top {
-        padding-top: 30px;
         font-size: 22px;
       }
 
@@ -986,93 +1204,73 @@ export default {
 
   .second-title {
     display: none;
-    margin: 20px auto;
-    font-size: 18px;
-    letter-spacing: 3;
-
-    .img-left {
-      margin-right: 10px;
-    }
-
-    .img-right {
-      margin-left: 10px;
-    }
-
-    img {
-      height: 12px;
-    }
   }
 
   .contact-main {
-    padding-bottom: 30px;
-    // display: flex;
-    // justify-content: space-between;
-
-    .main-left {
-      width: 90%;
-      margin: 0 auto;
-      padding: 0;
-
-      .main-left-title {
-        font-size: 20px;
-        font-weight: bold;
-      }
-
-      .main-left-tel,
-      .main-left-email {
-        .con-icon01 {
-          width: 15px;
-          height: 15px;
-        }
-
-        .con-icon02 {
-          width: 18px;
-          height: 13px;
-        }
-
-        .con-icon03 {
-          width: 15px;
-          height: 19px;
-        }
-
-        p {
-          margin-left: 10px;
-          font-size: 14px;
+    .main-company-every {
+      padding: 0 15px;
+      .every-img {
+        cursor: pointer;
+        img {
+          width: 182px;
+          height: 132px;
         }
       }
 
-      .main-left-tel,
-      .left-email {
-        margin-top: 0;
-        margin-bottom: 15px;
+      .marginRight {
+        margin-right: 13px;
       }
 
-      .main-left-email {
-        margin-top: 0;
+      .marginLeft {
+        margin-left: 13px;
       }
 
-      .main-left-map-font {
-        margin-top: 20px;
-        font-size: 18px;
-        font-weight: bold;
+      .every-font {
+        .font-title {
+          font-weight: 600;
+          font-size: 17px;
+        }
+
+        .font-detail {
+          font-size: 10px;
+        }
       }
 
-      .main-left-map {
-        // width: 300px;
-        width: 100%;
-        height: 250px;
-        margin: 0 auto;
-        margin-top: 20px;
+      .font-contact {
+        .contact-phone {
+          font-size: 10px;
+        }
+
+        .contact-email {
+          .tag-read {
+            font-size: 10px;
+          }
+        }
+      }
+
+      .every-font {
+        width: 300px;
+
+        .font-detail {
+          margin-top: 8px;
+          line-height: 16px;
+        }
+      }
+
+      .font-contact {
+        margin-top: 10px;
+
+        .contact-email {
+          margin-top: 5px;
+        }
       }
     }
-
     .main-right {
       width: 90%;
-      margin: 40px auto 0;
+      margin: 16px auto 0;
       padding: 0 30px 20px;
 
       .right-top {
-        padding-top: 20px;
         font-size: 20px;
       }
 
@@ -1105,13 +1303,14 @@ export default {
 
   .second-phone-title {
     display: block;
-    width: 100%;
-    height: 32px;
-    margin: 25px auto;
-    line-height: 32px;
-    color: #fff;
-    background-color: #755793;
-    font-size: 16px;
+    margin: 30px auto 15px;
+    text-align: left;
+
+    img {
+      width: 325px;
+      height: 97px;
+      object-fit: cover;
+    }
   }
 }
 </style>
@@ -1122,9 +1321,10 @@ export default {
     border: none;
   }
 
-  .el-input__inner {
+  .el-input__inner,
+  .area-type {
     // width: 100px;
-    background-color: #fff;
+    background-color: #f5f6f7 !important;
     border: none;
   }
 

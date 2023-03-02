@@ -111,6 +111,30 @@
         </div>
         <div class="main-every">
           <div>
+            <img src="../assets/imgs/home/110.png" @click="listJump(11)" />
+          </div>
+          <div>
+            <p class="every-title01">
+              {{ $t("localization.skinProblemFont") }}
+            </p>
+            <div class="every-title12" v-if="langType !== 'en-US'"></div>
+          </div>
+        </div>
+        <div class="main-every">
+          <!--  @click="listJump(12)" -->
+          <div>
+            <img src="../assets/imgs/home/120.png" />
+          </div>
+          <div>
+            <p class="every-title01">
+              {{ $t("localization.faceAndBodyFont") }}
+            </p>
+            <div class="every-title13" v-if="langType !== 'en-US'"></div>
+          </div>
+        </div>
+
+        <div class="main-every">
+          <div>
             <img
               src="../assets/imgs/home/009.png"
               class="imgGetHeight"
@@ -149,6 +173,7 @@
             <div class="every-title11" v-if="langType !== 'en-US'"></div>
           </div>
         </div>
+        <div class="main-every" style="margin: 0;"></div>
         <div class="main-every" style="margin: 0;"></div>
         <div class="main-every" style="margin: 0;"></div>
         <!-- <div class="main-nine" :style="{ height: imgHeight + 'px' }">
@@ -344,11 +369,20 @@ export default {
         }
 
         .every-title02 {
+          width: 254px;
+          height: 26px;
+          margin: 0 auto;
+          // margin-top: 10px;
+          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background-size: 100%;
+        }
+
+        .every-title12 {
           width: 200px;
           height: 25px;
           margin: 0 auto;
           // margin-top: 10px;
-          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background: url("../assets/imgs/home/font11.png") no-repeat;
           background-size: 100%;
         }
 
@@ -506,11 +540,20 @@ export default {
         }
 
         .every-title02 {
+          width: 254px;
+          height: 26px;
+          margin: 0 auto;
+          // margin-top: 10px;
+          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background-size: 100%;
+        }
+
+        .every-title12 {
           width: 200px;
           height: 25px;
           margin: 0 auto;
           // margin-top: 10px;
-          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background: url("../assets/imgs/home/font11.png") no-repeat;
           background-size: 100%;
         }
 
@@ -668,11 +711,20 @@ export default {
         }
 
         .every-title02 {
+          width: 254px;
+          height: 26px;
+          margin: 0 auto;
+          // margin-top: 10px;
+          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background-size: 100%;
+        }
+
+        .every-title12 {
           width: 200px;
           height: 25px;
           margin: 0 auto;
           // margin-top: 10px;
-          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background: url("../assets/imgs/home/font11.png") no-repeat;
           background-size: 100%;
         }
 
@@ -830,11 +882,20 @@ export default {
         }
 
         .every-title02 {
+          width: 254px;
+          height: 26px;
+          margin: 0 auto;
+          // margin-top: 10px;
+          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background-size: 100%;
+        }
+
+        .every-title12 {
           width: 200px;
           height: 25px;
           margin: 0 auto;
           // margin-top: 10px;
-          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background: url("../assets/imgs/home/font11.png") no-repeat;
           background-size: 100%;
         }
 
@@ -992,11 +1053,20 @@ export default {
         }
 
         .every-title02 {
+          width: 254px;
+          height: 26px;
+          margin: 0 auto;
+          // margin-top: 10px;
+          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background-size: 100%;
+        }
+
+        .every-title12 {
           width: 200px;
           height: 25px;
           margin: 0 auto;
           // margin-top: 10px;
-          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background: url("../assets/imgs/home/font11.png") no-repeat;
           background-size: 100%;
         }
 
@@ -1156,11 +1226,20 @@ export default {
         }
 
         .every-title02 {
+          width: 254px;
+          height: 26px;
+          margin: 0 auto;
+          // margin-top: 10px;
+          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background-size: 100%;
+        }
+
+        .every-title12 {
           width: 200px;
           height: 25px;
           margin: 0 auto;
           // margin-top: 10px;
-          background: url("../assets/imgs/home/font01.png") no-repeat;
+          background: url("../assets/imgs/home/font11.png") no-repeat;
           background-size: 100%;
         }
 
@@ -1340,12 +1419,21 @@ export default {
         }
 
         .every-title02 {
-          width: 85%;
+          // width: 85%;
           height: 17px;
           margin: 0 auto;
           margin-top: 3px;
           background: url("../assets/imgs/font/Whitening&PigmentRemoval@2x.png")
             no-repeat;
+          background-size: 100% auto;
+        }
+
+        .every-title12 {
+          width: 85%;
+          height: 17px;
+          margin: 0 auto;
+          margin-top: 3px;
+          background: url("../assets/imgs/font/skinProblem.png") no-repeat;
           background-size: 100% auto;
         }
 
@@ -1535,12 +1623,21 @@ export default {
         }
 
         .every-title02 {
-          width: 85%;
+          // width: 85%;
           height: 17px;
           margin: 0 auto;
           margin-top: 3px;
           background: url("../assets/imgs/font/Whitening&PigmentRemoval@2x.png")
             no-repeat;
+          background-size: 100% auto;
+        }
+
+        .every-title12 {
+          width: 85%;
+          height: 17px;
+          margin: 0 auto;
+          margin-top: 3px;
+          background: url("../assets/imgs/font/skinProblem.png") no-repeat;
           background-size: 100% auto;
         }
 
